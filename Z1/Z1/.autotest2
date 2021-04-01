@@ -1,0 +1,246 @@
+{
+    "id": 0,
+    "name": "Tehnike programiranja (2016\/2076), Zadaća 1, Zadatak 1",
+    "languages": [
+        "C++"
+    ],
+    "tools": {
+        "compile": {
+            "require": "g++",
+            "features": [
+                "optimize",
+                "warn",
+                "pedantic",
+                "C++14"
+            ]
+        },
+        "compile[debug]": {
+            "require": "g++",
+            "features": [
+                "debug",
+                "C++14"
+            ]
+        },
+        "execute": {
+            "environment": {
+                "timeout": 10,
+                "memory": 1000000
+            }
+        },
+        "debug": [],
+        "profile[memcheck]": {
+            "require": "valgrind",
+            "features": [
+                "memcheck"
+            ],
+            "environment": {
+                "timeout": 10
+            }
+        },
+        "profile[sgcheck]": {
+            "require": "valgrind",
+            "features": [
+                "sgcheck"
+            ],
+            "environment": {
+                "timeout": 10
+            }
+        }
+    },
+    "tests": [
+        {
+            "id": 1,
+            "name": "Test 1",
+            "options": [
+                "silent",
+                "terminate"
+            ],
+            "compile": []
+        },
+        {
+            "id": 2,
+            "name": "Test 2",
+            "patch": [
+                {
+                    "position": "main",
+                    "code": "_main();",
+                    "use_markers": true
+                },
+                {
+                    "position": "top_of_file",
+                    "code": "\/\/ Za sva pitanja vezana za zadatak 1, javiti se na mail: mz14970@etf.unsa.ba",
+                    "use_markers": true
+                }
+            ],
+            "compile": [],
+            "compile[debug]": [],
+            "execute": {
+                "environment": {
+                    "stdin": "12 74 125 4 1 0\n2\n"
+                },
+                "expect": [
+                    "Unesite slijed brojeva (0 za kraj): Unesite zeljeni prag za multiplikativnu otpornost: \nBrojevi cija je multiplikativna otpornost manja od zadane: 12 4 1\nBrojevi cija je multiplikativna otpornost veca od zadane: 74\nBrojevi cija je multiplikativna otpornost jednaka zadanoj: 125"
+                ]
+            },
+            "debug": [],
+            "profile[memcheck]": {
+                "environment": {
+                    "stdin": "12 74 125 4 1 0\n2\n"
+                }
+            },
+            "profile[sgcheck]": {
+                "environment": {
+                    "stdin": "12 74 125 4 1 0\n2\n"
+                }
+            }
+        },
+        {
+            "id": 3,
+            "name": "Test 3",
+            "patch": [
+                {
+                    "position": "main",
+                    "code": "_main();",
+                    "use_markers": true
+                },
+                {
+                    "position": "top_of_file",
+                    "code": "\/\/ Za sva pitanja vezana za zadatak 1, javiti se na mail: mz14970@etf.unsa.ba",
+                    "use_markers": true
+                }
+            ],
+            "compile": [],
+            "compile[debug]": [],
+            "execute": {
+                "environment": {
+                    "stdin": "12 -74 125 -4 1 0\n3"
+                },
+                "expect": [
+                    "Unesite slijed brojeva (0 za kraj): Unesite zeljeni prag za multiplikativnu otpornost: \nBrojevi cija je multiplikativna otpornost manja od zadane: 12 125 -4 1\nBrojevi cija je multiplikativna otpornost veca od zadane: Nema takvih brojeva\nBrojevi cija je multiplikativna otpornost jednaka zadanoj: -74"
+                ]
+            },
+            "debug": [],
+            "profile[memcheck]": {
+                "environment": {
+                    "stdin": "12 -74 125 -4 1 0\n3"
+                }
+            },
+            "profile[sgcheck]": {
+                "environment": {
+                    "stdin": "12 -74 125 -4 1 0\n3"
+                }
+            }
+        },
+        {
+            "id": 4,
+            "name": "Test 4",
+            "patch": [
+                {
+                    "position": "main",
+                    "code": "_main();",
+                    "use_markers": true
+                },
+                {
+                    "position": "top_of_file",
+                    "code": "\/\/ Za sva pitanja vezana za zadatak 1, javiti se na mail: mz14970@etf.unsa.ba",
+                    "use_markers": true
+                }
+            ],
+            "compile": [],
+            "compile[debug]": [],
+            "execute": {
+                "environment": {
+                    "stdin": "0\n2\n"
+                },
+                "expect": [
+                    "Unesite slijed brojeva (0 za kraj): Unesite zeljeni prag za multiplikativnu otpornost: \nBrojevi cija je multiplikativna otpornost manja od zadane: Nema takvih brojeva\nBrojevi cija je multiplikativna otpornost veca od zadane: Nema takvih brojeva\nBrojevi cija je multiplikativna otpornost jednaka zadanoj: Nema takvih brojeva"
+                ]
+            },
+            "debug": [],
+            "profile[memcheck]": {
+                "environment": {
+                    "stdin": "0\n2\n"
+                }
+            },
+            "profile[sgcheck]": {
+                "environment": {
+                    "stdin": "0\n2\n"
+                }
+            }
+        },
+        {
+            "id": 5,
+            "name": "Test 5",
+            "patch": [
+                {
+                    "position": "main",
+                    "code": "_main();",
+                    "use_markers": true
+                },
+                {
+                    "position": "top_of_file",
+                    "code": "\/\/ Za sva pitanja vezana za zadatak 1, javiti se na mail: mz14970@etf.unsa.ba",
+                    "use_markers": true
+                }
+            ],
+            "compile": [],
+            "compile[debug]": [],
+            "execute": {
+                "environment": {
+                    "stdin": "-12 12 -12 12 -12 12 0\n1\n"
+                },
+                "expect": [
+                    "Unesite slijed brojeva (0 za kraj): Unesite zeljeni prag za multiplikativnu otpornost: \nBrojevi cija je multiplikativna otpornost manja od zadane: Nema takvih brojeva\nBrojevi cija je multiplikativna otpornost veca od zadane: Nema takvih brojeva\nBrojevi cija je multiplikativna otpornost jednaka zadanoj: -12 12"
+                ]
+            },
+            "debug": [],
+            "profile[memcheck]": {
+                "environment": {
+                    "stdin": "-12 12 -12 12 -12 12 0\n1\n"
+                }
+            },
+            "profile[sgcheck]": {
+                "environment": {
+                    "stdin": "-12 12 -12 12 -12 12 0\n1\n"
+                }
+            }
+        },
+        {
+            "id": 6,
+            "name": "Test 6",
+            "patch": [
+                {
+                    "position": "main",
+                    "code": "_main();",
+                    "use_markers": true
+                },
+                {
+                    "position": "top_of_file",
+                    "code": "\/\/ Za sva pitanja vezana za zadatak 1, javiti se na mail: mz14970@etf.unsa.ba",
+                    "use_markers": true
+                }
+            ],
+            "compile": [],
+            "compile[debug]": [],
+            "execute": {
+                "environment": {
+                    "stdin": "101 -202 303 -404 505 0\n3"
+                },
+                "expect": [
+                    "Unesite slijed brojeva (0 za kraj): Unesite zeljeni prag za multiplikativnu otpornost: \nBrojevi cija je multiplikativna otpornost manja od zadane: 101 -202 303 -404 505\nBrojevi cija je multiplikativna otpornost veca od zadane: Nema takvih brojeva\nBrojevi cija je multiplikativna otpornost jednaka zadanoj: Nema takvih brojeva"
+                ]
+            },
+            "debug": [],
+            "profile[memcheck]": {
+                "environment": {
+                    "stdin": "101 -202 303 -404 505 0\n3"
+                }
+            },
+            "profile[sgcheck]": {
+                "environment": {
+                    "stdin": "101 -202 303 -404 505 0\n3"
+                }
+            }
+        }
+    ]
+}

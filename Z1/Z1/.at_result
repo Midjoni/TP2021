@@ -1,0 +1,272 @@
+{
+    "buildhost_description": {
+        "id": "lab002-c01",
+        "os": "Linux 2.6.32-754.2.1.el6.x86_64 x86_64\n\"CentOS release 6.10 (Final)\"\n"
+    },
+    "tools": {
+        "compile": "g++ (GCC) 6.2.0",
+        "compile[debug]": "g++ (GCC) 6.2.0",
+        "debug": "GNU gdb (GDB) Red Hat Enterprise Linux (7.2-92.el6)",
+        "profile[memcheck]": "valgrind-3.8.1",
+        "profile[sgcheck]": "valgrind-3.8.1"
+    },
+    "status": 4,
+    "test_results": {
+        "2": {
+            "success": true,
+            "status": 1,
+            "tools": {
+                "patch": {
+                    "success": true
+                },
+                "compile": {
+                    "status": 1,
+                    "duration": 1,
+                    "output": "",
+                    "exit_code": 0,
+                    "success": true,
+                    "parsed_output": []
+                },
+                "compile[debug]": {
+                    "status": 1,
+                    "duration": 0,
+                    "output": "",
+                    "exit_code": 0,
+                    "success": true,
+                    "parsed_output": []
+                },
+                "execute": {
+                    "output": "Unesite slijed brojeva (0 za kraj): Unesite zeljeni prag za multiplikativnu otpornost: \nBrojevi cija je multiplikativna otpornost manja od zadane: 12 4 1 \nBrojevi cija je multiplikativna otpornost veca od zadane: 74 \nBrojevi cija je multiplikativna otpornost jednaka zadanoj: 125",
+                    "duration": 0,
+                    "status": 1,
+                    "exit_code": 0,
+                    "success": true
+                },
+                "debug": {
+                    "success": true
+                },
+                "profile[memcheck]": {
+                    "status": 1,
+                    "duration": 1,
+                    "output": "==21880== Memcheck, a memory error detector\n==21880== Copyright (C) 2002-2012, and GNU GPL'd, by Julian Seward et al.\n==21880== Using Valgrind-3.8.1 and LibVEX; rerun with -h for copyright info\n==21880== Command: outputw3tidy\n==21880==\n====START_TEST_4332====Unesite slijed brojeva (0 za kraj): Unesite zeljeni prag za multiplikativnu otpornost:\nBrojevi cija je multiplikativna otpornost manja od zadane: 12 4 1\nBrojevi cija je multiplikativna otpornost veca od zadane: 74\nBrojevi cija je multiplikativna otpornost jednaka zadanoj: 125 ====END_TEST_4332======21880==\n==21880== HEAP SUMMARY:\n==21880==     in use at exit: 72,704 bytes in 1 blocks\n==21880==   total heap usage: 15 allocs, 14 frees, 72,872 bytes allocated\n==21880==\n==21880== LEAK SUMMARY:\n==21880==    definitely lost: 0 bytes in 0 blocks\n==21880==    indirectly lost: 0 bytes in 0 blocks\n==21880==      possibly lost: 0 bytes in 0 blocks\n==21880==    still reachable: 72,704 bytes in 1 blocks\n==21880==         suppressed: 0 bytes in 0 blocks\n==21880== Rerun with --leak-check=full to see details of leaked memory\n==21880==\n==21880== For counts of detected and suppressed errors, rerun with: -v\n==21880== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 8 from 6)",
+                    "exit_code": 0,
+                    "success": true,
+                    "parsed_output": []
+                },
+                "profile[sgcheck]": {
+                    "status": 1,
+                    "duration": 0,
+                    "output": "==21883== Memcheck, a memory error detector\n==21883== Copyright (C) 2002-2012, and GNU GPL'd, by Julian Seward et al.\n==21883== Using Valgrind-3.8.1 and LibVEX; rerun with -h for copyright info\n==21883== Command: outputw3tidy\n==21883==\n====START_TEST_4332====Unesite slijed brojeva (0 za kraj): Unesite zeljeni prag za multiplikativnu otpornost:\nBrojevi cija je multiplikativna otpornost manja od zadane: 12 4 1\nBrojevi cija je multiplikativna otpornost veca od zadane: 74\nBrojevi cija je multiplikativna otpornost jednaka zadanoj: 125 ====END_TEST_4332======21883==\n==21883== HEAP SUMMARY:\n==21883==     in use at exit: 72,704 bytes in 1 blocks\n==21883==   total heap usage: 15 allocs, 14 frees, 72,872 bytes allocated\n==21883==\n==21883== LEAK SUMMARY:\n==21883==    definitely lost: 0 bytes in 0 blocks\n==21883==    indirectly lost: 0 bytes in 0 blocks\n==21883==      possibly lost: 0 bytes in 0 blocks\n==21883==    still reachable: 72,704 bytes in 1 blocks\n==21883==         suppressed: 0 bytes in 0 blocks\n==21883== Rerun with --leak-check=full to see details of leaked memory\n==21883==\n==21883== For counts of detected and suppressed errors, rerun with: -v\n==21883== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 8 from 6)",
+                    "exit_code": 0,
+                    "success": true,
+                    "parsed_output": []
+                }
+            }
+        },
+        "3": {
+            "success": true,
+            "status": 1,
+            "tools": {
+                "patch": {
+                    "success": true
+                },
+                "compile": {
+                    "status": 1,
+                    "duration": 1,
+                    "output": "",
+                    "exit_code": 0,
+                    "success": true,
+                    "parsed_output": []
+                },
+                "compile[debug]": {
+                    "status": 1,
+                    "duration": 1,
+                    "output": "",
+                    "exit_code": 0,
+                    "success": true,
+                    "parsed_output": []
+                },
+                "execute": {
+                    "output": "Unesite slijed brojeva (0 za kraj): Unesite zeljeni prag za multiplikativnu otpornost: \nBrojevi cija je multiplikativna otpornost manja od zadane: 12 125 -4 1 \nBrojevi cija je multiplikativna otpornost veca od zadane: Nema takvih brojeva\nBrojevi cija je multiplikativna otpornost jednaka zadanoj: -74",
+                    "duration": 0,
+                    "status": 1,
+                    "exit_code": 0,
+                    "success": true
+                },
+                "debug": {
+                    "success": true
+                },
+                "profile[memcheck]": {
+                    "status": 1,
+                    "duration": 0,
+                    "output": "==21916== Memcheck, a memory error detector\n==21916== Copyright (C) 2002-2012, and GNU GPL'd, by Julian Seward et al.\n==21916== Using Valgrind-3.8.1 and LibVEX; rerun with -h for copyright info\n==21916== Command: outputcu1bc6\n==21916==\n====START_TEST_3530====Unesite slijed brojeva (0 za kraj): Unesite zeljeni prag za multiplikativnu otpornost:\nBrojevi cija je multiplikativna otpornost manja od zadane: 12 125 -4 1\nBrojevi cija je multiplikativna otpornost veca od zadane: Nema takvih brojeva\nBrojevi cija je multiplikativna otpornost jednaka zadanoj: -74 ====END_TEST_3530======21916==\n==21916== HEAP SUMMARY:\n==21916==     in use at exit: 72,704 bytes in 1 blocks\n==21916==   total heap usage: 15 allocs, 14 frees, 72,880 bytes allocated\n==21916==\n==21916== LEAK SUMMARY:\n==21916==    definitely lost: 0 bytes in 0 blocks\n==21916==    indirectly lost: 0 bytes in 0 blocks\n==21916==      possibly lost: 0 bytes in 0 blocks\n==21916==    still reachable: 72,704 bytes in 1 blocks\n==21916==         suppressed: 0 bytes in 0 blocks\n==21916== Rerun with --leak-check=full to see details of leaked memory\n==21916==\n==21916== For counts of detected and suppressed errors, rerun with: -v\n==21916== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 8 from 6)",
+                    "exit_code": 0,
+                    "success": true,
+                    "parsed_output": []
+                },
+                "profile[sgcheck]": {
+                    "status": 1,
+                    "duration": 1,
+                    "output": "==21919== Memcheck, a memory error detector\n==21919== Copyright (C) 2002-2012, and GNU GPL'd, by Julian Seward et al.\n==21919== Using Valgrind-3.8.1 and LibVEX; rerun with -h for copyright info\n==21919== Command: outputcu1bc6\n==21919==\n====START_TEST_3530====Unesite slijed brojeva (0 za kraj): Unesite zeljeni prag za multiplikativnu otpornost:\nBrojevi cija je multiplikativna otpornost manja od zadane: 12 125 -4 1\nBrojevi cija je multiplikativna otpornost veca od zadane: Nema takvih brojeva\nBrojevi cija je multiplikativna otpornost jednaka zadanoj: -74 ====END_TEST_3530======21919==\n==21919== HEAP SUMMARY:\n==21919==     in use at exit: 72,704 bytes in 1 blocks\n==21919==   total heap usage: 15 allocs, 14 frees, 72,880 bytes allocated\n==21919==\n==21919== LEAK SUMMARY:\n==21919==    definitely lost: 0 bytes in 0 blocks\n==21919==    indirectly lost: 0 bytes in 0 blocks\n==21919==      possibly lost: 0 bytes in 0 blocks\n==21919==    still reachable: 72,704 bytes in 1 blocks\n==21919==         suppressed: 0 bytes in 0 blocks\n==21919== Rerun with --leak-check=full to see details of leaked memory\n==21919==\n==21919== For counts of detected and suppressed errors, rerun with: -v\n==21919== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 8 from 6)",
+                    "exit_code": 0,
+                    "success": true,
+                    "parsed_output": []
+                }
+            }
+        },
+        "4": {
+            "success": true,
+            "status": 1,
+            "tools": {
+                "patch": {
+                    "success": true
+                },
+                "compile": {
+                    "status": 1,
+                    "duration": 0,
+                    "output": "",
+                    "exit_code": 0,
+                    "success": true,
+                    "parsed_output": []
+                },
+                "compile[debug]": {
+                    "status": 1,
+                    "duration": 1,
+                    "output": "",
+                    "exit_code": 0,
+                    "success": true,
+                    "parsed_output": []
+                },
+                "execute": {
+                    "output": "Unesite slijed brojeva (0 za kraj): Unesite zeljeni prag za multiplikativnu otpornost: \nBrojevi cija je multiplikativna otpornost manja od zadane: Nema takvih brojeva\nBrojevi cija je multiplikativna otpornost veca od zadane: Nema takvih brojeva\nBrojevi cija je multiplikativna otpornost jednaka zadanoj: Nema takvih brojeva",
+                    "duration": 0,
+                    "status": 1,
+                    "exit_code": 0,
+                    "success": true
+                },
+                "debug": {
+                    "success": true
+                },
+                "profile[memcheck]": {
+                    "status": 1,
+                    "duration": 0,
+                    "output": "==21952== Memcheck, a memory error detector\n==21952== Copyright (C) 2002-2012, and GNU GPL'd, by Julian Seward et al.\n==21952== Using Valgrind-3.8.1 and LibVEX; rerun with -h for copyright info\n==21952== Command: outputiQwcuT\n==21952==\n====START_TEST_5506====Unesite slijed brojeva (0 za kraj): Unesite zeljeni prag za multiplikativnu otpornost:\nBrojevi cija je multiplikativna otpornost manja od zadane: Nema takvih brojeva\nBrojevi cija je multiplikativna otpornost veca od zadane: Nema takvih brojeva\nBrojevi cija je multiplikativna otpornost jednaka zadanoj: Nema takvih brojeva====END_TEST_5506======21952==\n==21952== HEAP SUMMARY:\n==21952==     in use at exit: 72,704 bytes in 1 blocks\n==21952==   total heap usage: 1 allocs, 0 frees, 72,704 bytes allocated\n==21952==\n==21952== LEAK SUMMARY:\n==21952==    definitely lost: 0 bytes in 0 blocks\n==21952==    indirectly lost: 0 bytes in 0 blocks\n==21952==      possibly lost: 0 bytes in 0 blocks\n==21952==    still reachable: 72,704 bytes in 1 blocks\n==21952==         suppressed: 0 bytes in 0 blocks\n==21952== Rerun with --leak-check=full to see details of leaked memory\n==21952==\n==21952== For counts of detected and suppressed errors, rerun with: -v\n==21952== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 8 from 6)",
+                    "exit_code": 0,
+                    "success": true,
+                    "parsed_output": []
+                },
+                "profile[sgcheck]": {
+                    "status": 1,
+                    "duration": 1,
+                    "output": "==21955== Memcheck, a memory error detector\n==21955== Copyright (C) 2002-2012, and GNU GPL'd, by Julian Seward et al.\n==21955== Using Valgrind-3.8.1 and LibVEX; rerun with -h for copyright info\n==21955== Command: outputiQwcuT\n==21955==\n====START_TEST_5506====Unesite slijed brojeva (0 za kraj): Unesite zeljeni prag za multiplikativnu otpornost:\nBrojevi cija je multiplikativna otpornost manja od zadane: Nema takvih brojeva\nBrojevi cija je multiplikativna otpornost veca od zadane: Nema takvih brojeva\nBrojevi cija je multiplikativna otpornost jednaka zadanoj: Nema takvih brojeva====END_TEST_5506======21955==\n==21955== HEAP SUMMARY:\n==21955==     in use at exit: 72,704 bytes in 1 blocks\n==21955==   total heap usage: 1 allocs, 0 frees, 72,704 bytes allocated\n==21955==\n==21955== LEAK SUMMARY:\n==21955==    definitely lost: 0 bytes in 0 blocks\n==21955==    indirectly lost: 0 bytes in 0 blocks\n==21955==      possibly lost: 0 bytes in 0 blocks\n==21955==    still reachable: 72,704 bytes in 1 blocks\n==21955==         suppressed: 0 bytes in 0 blocks\n==21955== Rerun with --leak-check=full to see details of leaked memory\n==21955==\n==21955== For counts of detected and suppressed errors, rerun with: -v\n==21955== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 8 from 6)",
+                    "exit_code": 0,
+                    "success": true,
+                    "parsed_output": []
+                }
+            }
+        },
+        "5": {
+            "success": true,
+            "status": 1,
+            "tools": {
+                "patch": {
+                    "success": true
+                },
+                "compile": {
+                    "status": 1,
+                    "duration": 1,
+                    "output": "",
+                    "exit_code": 0,
+                    "success": true,
+                    "parsed_output": []
+                },
+                "compile[debug]": {
+                    "status": 1,
+                    "duration": 0,
+                    "output": "",
+                    "exit_code": 0,
+                    "success": true,
+                    "parsed_output": []
+                },
+                "execute": {
+                    "output": "Unesite slijed brojeva (0 za kraj): Unesite zeljeni prag za multiplikativnu otpornost: \nBrojevi cija je multiplikativna otpornost manja od zadane: Nema takvih brojeva\nBrojevi cija je multiplikativna otpornost veca od zadane: Nema takvih brojeva\nBrojevi cija je multiplikativna otpornost jednaka zadanoj: -12 12",
+                    "duration": 0,
+                    "status": 1,
+                    "exit_code": 0,
+                    "success": true
+                },
+                "debug": {
+                    "success": true
+                },
+                "profile[memcheck]": {
+                    "status": 1,
+                    "duration": 1,
+                    "output": "==21988== Memcheck, a memory error detector\n==21988== Copyright (C) 2002-2012, and GNU GPL'd, by Julian Seward et al.\n==21988== Using Valgrind-3.8.1 and LibVEX; rerun with -h for copyright info\n==21988== Command: outputSLaeZV\n==21988==\n====START_TEST_9112====Unesite slijed brojeva (0 za kraj): Unesite zeljeni prag za multiplikativnu otpornost:\nBrojevi cija je multiplikativna otpornost manja od zadane: Nema takvih brojeva\nBrojevi cija je multiplikativna otpornost veca od zadane: Nema takvih brojeva\nBrojevi cija je multiplikativna otpornost jednaka zadanoj: -12 12 ====END_TEST_9112======21988==\n==21988== HEAP SUMMARY:\n==21988==     in use at exit: 72,704 bytes in 1 blocks\n==21988==   total heap usage: 15 allocs, 14 frees, 72,884 bytes allocated\n==21988==\n==21988== LEAK SUMMARY:\n==21988==    definitely lost: 0 bytes in 0 blocks\n==21988==    indirectly lost: 0 bytes in 0 blocks\n==21988==      possibly lost: 0 bytes in 0 blocks\n==21988==    still reachable: 72,704 bytes in 1 blocks\n==21988==         suppressed: 0 bytes in 0 blocks\n==21988== Rerun with --leak-check=full to see details of leaked memory\n==21988==\n==21988== For counts of detected and suppressed errors, rerun with: -v\n==21988== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 8 from 6)",
+                    "exit_code": 0,
+                    "success": true,
+                    "parsed_output": []
+                },
+                "profile[sgcheck]": {
+                    "status": 1,
+                    "duration": 0,
+                    "output": "==21991== Memcheck, a memory error detector\n==21991== Copyright (C) 2002-2012, and GNU GPL'd, by Julian Seward et al.\n==21991== Using Valgrind-3.8.1 and LibVEX; rerun with -h for copyright info\n==21991== Command: outputSLaeZV\n==21991==\n====START_TEST_9112====Unesite slijed brojeva (0 za kraj): Unesite zeljeni prag za multiplikativnu otpornost:\nBrojevi cija je multiplikativna otpornost manja od zadane: Nema takvih brojeva\nBrojevi cija je multiplikativna otpornost veca od zadane: Nema takvih brojeva\nBrojevi cija je multiplikativna otpornost jednaka zadanoj: -12 12 ====END_TEST_9112======21991==\n==21991== HEAP SUMMARY:\n==21991==     in use at exit: 72,704 bytes in 1 blocks\n==21991==   total heap usage: 15 allocs, 14 frees, 72,884 bytes allocated\n==21991==\n==21991== LEAK SUMMARY:\n==21991==    definitely lost: 0 bytes in 0 blocks\n==21991==    indirectly lost: 0 bytes in 0 blocks\n==21991==      possibly lost: 0 bytes in 0 blocks\n==21991==    still reachable: 72,704 bytes in 1 blocks\n==21991==         suppressed: 0 bytes in 0 blocks\n==21991== Rerun with --leak-check=full to see details of leaked memory\n==21991==\n==21991== For counts of detected and suppressed errors, rerun with: -v\n==21991== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 8 from 6)",
+                    "exit_code": 0,
+                    "success": true,
+                    "parsed_output": []
+                }
+            }
+        },
+        "6": {
+            "success": true,
+            "status": 1,
+            "tools": {
+                "patch": {
+                    "success": true
+                },
+                "compile": {
+                    "status": 1,
+                    "duration": 1,
+                    "output": "",
+                    "exit_code": 0,
+                    "success": true,
+                    "parsed_output": []
+                },
+                "compile[debug]": {
+                    "status": 1,
+                    "duration": 1,
+                    "output": "",
+                    "exit_code": 0,
+                    "success": true,
+                    "parsed_output": []
+                },
+                "execute": {
+                    "output": "Unesite slijed brojeva (0 za kraj): Unesite zeljeni prag za multiplikativnu otpornost: \nBrojevi cija je multiplikativna otpornost manja od zadane: 101 -202 303 -404 505 \nBrojevi cija je multiplikativna otpornost veca od zadane: Nema takvih brojeva\nBrojevi cija je multiplikativna otpornost jednaka zadanoj: Nema takvih brojeva",
+                    "duration": 0,
+                    "status": 1,
+                    "exit_code": 0,
+                    "success": true
+                },
+                "debug": {
+                    "success": true
+                },
+                "profile[memcheck]": {
+                    "status": 1,
+                    "duration": 0,
+                    "output": "==22024== Memcheck, a memory error detector\n==22024== Copyright (C) 2002-2012, and GNU GPL'd, by Julian Seward et al.\n==22024== Using Valgrind-3.8.1 and LibVEX; rerun with -h for copyright info\n==22024== Command: outputpTYCKd\n==22024==\n====START_TEST_3498====Unesite slijed brojeva (0 za kraj): Unesite zeljeni prag za multiplikativnu otpornost:\nBrojevi cija je multiplikativna otpornost manja od zadane: 101 -202 303 -404 505\nBrojevi cija je multiplikativna otpornost veca od zadane: Nema takvih brojeva\nBrojevi cija je multiplikativna otpornost jednaka zadanoj: Nema takvih brojeva====END_TEST_3498======22024==\n==22024== HEAP SUMMARY:\n==22024==     in use at exit: 72,704 bytes in 1 blocks\n==22024==   total heap usage: 16 allocs, 15 frees, 72,924 bytes allocated\n==22024==\n==22024== LEAK SUMMARY:\n==22024==    definitely lost: 0 bytes in 0 blocks\n==22024==    indirectly lost: 0 bytes in 0 blocks\n==22024==      possibly lost: 0 bytes in 0 blocks\n==22024==    still reachable: 72,704 bytes in 1 blocks\n==22024==         suppressed: 0 bytes in 0 blocks\n==22024== Rerun with --leak-check=full to see details of leaked memory\n==22024==\n==22024== For counts of detected and suppressed errors, rerun with: -v\n==22024== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 8 from 6)",
+                    "exit_code": 0,
+                    "success": true,
+                    "parsed_output": []
+                },
+                "profile[sgcheck]": {
+                    "status": 1,
+                    "duration": 1,
+                    "output": "==22027== Memcheck, a memory error detector\n==22027== Copyright (C) 2002-2012, and GNU GPL'd, by Julian Seward et al.\n==22027== Using Valgrind-3.8.1 and LibVEX; rerun with -h for copyright info\n==22027== Command: outputpTYCKd\n==22027==\n====START_TEST_3498====Unesite slijed brojeva (0 za kraj): Unesite zeljeni prag za multiplikativnu otpornost:\nBrojevi cija je multiplikativna otpornost manja od zadane: 101 -202 303 -404 505\nBrojevi cija je multiplikativna otpornost veca od zadane: Nema takvih brojeva\nBrojevi cija je multiplikativna otpornost jednaka zadanoj: Nema takvih brojeva====END_TEST_3498======22027==\n==22027== HEAP SUMMARY:\n==22027==     in use at exit: 72,704 bytes in 1 blocks\n==22027==   total heap usage: 16 allocs, 15 frees, 72,924 bytes allocated\n==22027==\n==22027== LEAK SUMMARY:\n==22027==    definitely lost: 0 bytes in 0 blocks\n==22027==    indirectly lost: 0 bytes in 0 blocks\n==22027==      possibly lost: 0 bytes in 0 blocks\n==22027==    still reachable: 72,704 bytes in 1 blocks\n==22027==         suppressed: 0 bytes in 0 blocks\n==22027== Rerun with --leak-check=full to see details of leaked memory\n==22027==\n==22027== For counts of detected and suppressed errors, rerun with: -v\n==22027== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 8 from 6)",
+                    "exit_code": 0,
+                    "success": true,
+                    "parsed_output": []
+                }
+            }
+        }
+    },
+    "time": 1617205674
+}

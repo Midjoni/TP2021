@@ -1,0 +1,191 @@
+{
+    "id": 0,
+    "name": "Tehnike programiranja (2016\/2076), Zadaća 1, Zadatak 4",
+    "languages": [
+        "C++"
+    ],
+    "tools": {
+        "compile": {
+            "require": "g++",
+            "features": [
+                "optimize",
+                "warn",
+                "pedantic",
+                "C++14"
+            ]
+        },
+        "compile[debug]": {
+            "require": "g++",
+            "features": [
+                "debug",
+                "C++14"
+            ]
+        },
+        "execute": {
+            "environment": {
+                "timeout": 10,
+                "memory": 1000000
+            }
+        },
+        "debug": [],
+        "profile[memcheck]": {
+            "require": "valgrind",
+            "features": [
+                "memcheck"
+            ],
+            "environment": {
+                "timeout": 10
+            }
+        },
+        "profile[sgcheck]": {
+            "require": "valgrind",
+            "features": [
+                "sgcheck"
+            ],
+            "environment": {
+                "timeout": 10
+            }
+        }
+    },
+    "tests": [
+        {
+            "id": 2,
+            "name": "Test 1",
+            "options": [
+                "silent",
+                "terminate"
+            ],
+            "compile": []
+        },
+        {
+            "id": 1,
+            "name": "Test 2",
+            "patch": [
+                {
+                    "position": "main",
+                    "code": "\/*\nTP2020-2021, Zadaca 1, Zadatak 4\nAutor testova: Kerim Hod\u017ei\u0107 (kerim.hodzic@etf.unsa.ba)\nAT1: test iz postavke\n\n*\/\n{\n_main();\n}"
+                }
+            ],
+            "compile": [],
+            "execute": {
+                "environment": {
+                    "stdin": "4\njabuka\napple\nda\nyes\nkako\nhow\nne\nno\nkako da ne\n\n"
+                },
+                "expect": [
+                    "Unesite koliko rije\u010di sadr\u017ei rje\u010dnik.\nUnesite 1. original rje\u010dnika.\nUnesite 1. zamjenu rje\u010dnika.\nUnesite 2. original rje\u010dnika.\nUnesite 2. zamjenu rje\u010dnika.\nUnesite 3. original rje\u010dnika.\nUnesite 3. zamjenu rje\u010dnika.\nUnesite 4. original rje\u010dnika.\nUnesite 4. zamjenu rje\u010dnika.\nUnesite re\u010denicu koju \u017eelite transformisati: \nTransformisana re\u010denica glasi:\nhow yes no\nUnesite re\u010denicu koju \u017eelite transformisati:"
+                ]
+            },
+            "debug": [],
+            "profile[memcheck]": {
+                "environment": {
+                    "stdin": "4\njabuka\napple\nda\nyes\nkako\nhow\nne\nno\nkako da ne\n\n"
+                }
+            },
+            "profile[sgcheck]": {
+                "environment": {
+                    "stdin": "4\njabuka\napple\nda\nyes\nkako\nhow\nne\nno\nkako da ne\n\n"
+                }
+            }
+        },
+        {
+            "id": 3,
+            "name": "Test 3",
+            "patch": [
+                {
+                    "position": "main",
+                    "code": "\/*\nTP2020-2021, Zadaca 1, Zadatak 4\nAutor testova: Kerim Hod\u017ei\u0107 (kerim.hodzic@etf.unsa.ba)\nAT1: test iz postavke\n\n*\/\n{\n_main();\n}"
+                }
+            ],
+            "compile": [],
+            "compile[debug]": [],
+            "execute": {
+                "environment": {
+                    "stdin": "3\nmart\no\u017eujak\nmaj\nsvibanj\njul\nsrpanj\ndavor marti\u0107 ima sestre maju i juliju\nostalo samo je sje\u0107anje na jedan juli\nostalo samo je sje\u0107anje na jedan jul\n"
+                },
+                "expect": [
+                    "Unesite koliko rije\u010di sadr\u017ei rje\u010dnik.\nUnesite 1. original rje\u010dnika.\nUnesite 1. zamjenu rje\u010dnika.\nUnesite 2. original rje\u010dnika.\nUnesite 2. zamjenu rje\u010dnika.\nUnesite 3. original rje\u010dnika.\nUnesite 3. zamjenu rje\u010dnika.\nUnesite re\u010denicu koju \u017eelite transformisati:\nTransformisana re\u010denica glasi:\ndavor marti\u0107 ima sestre maju i juliju\nUnesite re\u010denicu koju \u017eelite transformisati:\nTransformisana re\u010denica glasi:\nostalo samo je sje\u0107anje na jedan juli\nUnesite re\u010denicu koju \u017eelite transformisati:\nTransformisana re\u010denica glasi:\nostalo samo je sje\u0107anje na jedan srpanj\nUnesite re\u010denicu koju \u017eelite transformisati:"
+                ]
+            },
+            "debug": [],
+            "profile[memcheck]": {
+                "environment": {
+                    "stdin": "3\nmart\nmaj\njul\no\u017eujak\nsvibanj\nsrpanj\ndavor marti\u0107 ima sestre maju i juliju\nostalo samo je sje\u0107anje na jedan juli\nostalo samo je sje\u0107anje na jedan jul\n"
+                }
+            },
+            "profile[sgcheck]": {
+                "environment": {
+                    "stdin": "3\nmart\nmaj\njul\no\u017eujak\nsvibanj\nsrpanj\ndavor marti\u0107 ima sestre maju i juliju\nostalo samo je sje\u0107anje na jedan juli\nostalo samo je sje\u0107anje na jedan jul\n"
+                }
+            }
+        },
+        {
+            "id": 4,
+            "name": "Test 4",
+            "patch": [
+                {
+                    "position": "main",
+                    "code": "    try {\n    std::vector<std::string> vektor1 {\"rije\u010d\", \"rje\u010dca\"};\n    std::vector<std::string> vektor2 {\"rijeka\", \"rje\u010dica\", \"suvi\u0161no\"};\n    std::cout<<ZamjenaRijeci(\"ovo je re\u010denica\",vektor1,vektor2)<<(\"\\n\");\n    }\n    catch (std::domain_error e)\n    {\n    std::cout<<e.what();\n    }"
+                }
+            ],
+            "compile": [],
+            "compile[debug]": [],
+            "execute": {
+                "expect": [
+                    "Nekorektni parametri"
+                ],
+                "environment": []
+            },
+            "debug": [],
+            "profile[memcheck]": {
+                "environment": {
+                    "stdin": "    try {\n    std::vector<std::string> vektor1 {\"rije\u010d\", \"rje\u010dca\"};\n    std::vector<std::string> vektor2 {\"rijeka\", \"rje\u010dica\", \"suvi\u0161no\"};\n    std::cout<<ZamjenaRijeci(\"ovo je re\u010denica\",vektor1,vektor2)<<(\"\\n\");\n    }\n    catch (std::domain_error e)\n    {\n    std::cout<<e.what();\n    }"
+                }
+            },
+            "profile[sgcheck]": {
+                "environment": {
+                    "stdin": "    try {\n    std::vector<std::string> vektor1 {\"rije\u010d\", \"rje\u010dca\"};\n    std::vector<std::string> vektor2 {\"rijeka\", \"rje\u010dica\", \"suvi\u0161no\"};\n    std::cout<<ZamjenaRijeci(\"ovo je re\u010denica\",vektor1,vektor2)<<(\"\\n\");\n    }\n    catch (std::domain_error e)\n    {\n    std::cout<<e.what();\n    }"
+                }
+            }
+        },
+        {
+            "id": 5,
+            "name": "Test 5",
+            "patch": [
+                {
+                    "position": "main",
+                    "code": "    try {\n    std::vector<std::string> vektor1 {\"friend\"};\n    std::vector<std::string> vektor2 {\"mellon\"};\n    std::cout<<ZamjenaRijeci(\"oh it is quite simple if you are a friend you speak the password and the doors will open\",vektor1,vektor2)<<(\"\\n\");\n    }\n    catch (std::domain_error e)\n    {\n    std::cout<<e.what();\n    }"
+                }
+            ],
+            "compile": [],
+            "compile[debug]": [],
+            "execute": {
+                "expect": [
+                    "oh it is quite simple if you are a mellon you speak the password and the doors will open"
+                ]
+            },
+            "debug": [],
+            "profile[memcheck]": [],
+            "profile[sgcheck]": []
+        },
+        {
+            "id": 6,
+            "name": "Test 6",
+            "patch": [
+                {
+                    "position": "main",
+                    "code": "    try {\n    std::vector<std::string> vektor1 {\"hmmm\", \"my\", \"medallion\", \"is\" , \"humming\"};\n    std::vector<std::string> vektor2 {\"hm\", \"moj\", \"medaljon\", \"\", \"bruji\" };\n    std::cout<<ZamjenaRijeci(\"    hmmm     my medallion  is humming     \",vektor1,vektor2)<<(\"\\n\");\n    }\n    catch (std::domain_error e)\n    {\n    std::cout<<e.what();\n    }"
+                }
+            ],
+            "compile": [],
+            "compile[debug]": [],
+            "execute": {
+                "expect": [
+                    "    hm     moj medaljon   bruji     "
+                ]
+            },
+            "debug": [],
+            "profile[memcheck]": [],
+            "profile[sgcheck]": []
+        }
+    ]
+}

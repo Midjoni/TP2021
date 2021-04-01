@@ -1,0 +1,207 @@
+{
+    "id": 0,
+    "name": "Tehnike programiranja (2016\/2076), Zadaća 1, Zadatak 2",
+    "languages": [
+        "C++"
+    ],
+    "tools": {
+        "compile": {
+            "require": "g++",
+            "features": [
+                "optimize",
+                "warn",
+                "pedantic",
+                "C++14"
+            ]
+        },
+        "compile[debug]": {
+            "require": "g++",
+            "features": [
+                "debug",
+                "C++14"
+            ]
+        },
+        "execute": {
+            "environment": {
+                "timeout": 10,
+                "memory": 1000000
+            }
+        },
+        "debug": [],
+        "profile[memcheck]": {
+            "require": "valgrind",
+            "features": [
+                "memcheck"
+            ],
+            "environment": {
+                "timeout": 10
+            }
+        },
+        "profile[sgcheck]": {
+            "require": "valgrind",
+            "features": [
+                "sgcheck"
+            ],
+            "environment": {
+                "timeout": 10
+            }
+        }
+    },
+    "tests": [
+        {
+            "compile": [],
+            "options": [
+                "silent",
+                "terminate"
+            ]
+        },
+        {
+            "id": 1,
+            "name": "Test 1",
+            "patch": [
+                {
+                    "position": "main",
+                    "code": "\/\/ AT 1: Standardan test main programa\n    {\n        \/\/ Unos iz postavke zadace\n        _main();\n    }",
+                    "use_markers": true
+                },
+                {
+                    "position": "top_of_file",
+                    "code": "\/\/ Autor autotestova za zadatak 2 je Haris Capelj. Za sva pitanja oko 2. zadatka, javite se na mail: hcapelj1@etf.unsa.ba",
+                    "use_markers": true
+                }
+            ],
+            "compile": [],
+            "compile[debug]": [],
+            "execute": {
+                "environment": {
+                    "stdin": "4 x 7\n0 0 0 0 0 0 0\n0 0 6 3 5 0 0\n0 6 0 0 3 0 0\n0 0 0 0 0 0 0"
+                },
+                "expect": [
+                    "Unesite dimenziju matrice u formatu m x n: Unesite elemente matrice:\nElementi 1. reda: Elementi 2. reda: Elementi 3. reda: Elementi 4. reda: \nRaspon matrice je od (2,2) do (3,5)."
+                ]
+            },
+            "debug": [],
+            "profile[memcheck]": {
+                "environment": {
+                    "stdin": "4 x 7\n0 0 0 0 0 0 0\n0 0 6 3 5 0 0\n0 6 0 0 3 0 0\n0 0 0 0 0 0 0"
+                }
+            },
+            "profile[sgcheck]": {
+                "environment": {
+                    "stdin": "4 x 7\n0 0 0 0 0 0 0\n0 0 6 3 5 0 0\n0 6 0 0 3 0 0\n0 0 0 0 0 0 0"
+                }
+            }
+        },
+        {
+            "id": 2,
+            "name": "Test 2",
+            "patch": [
+                {
+                    "position": "main",
+                    "code": "\/\/ AT 2: Test matrice dimenzija 3 x 3\n    {\n        _main();\n    }",
+                    "use_markers": true
+                },
+                {
+                    "position": "top_of_file",
+                    "code": "\/\/ Autor autotestova za zadatak 2 je Haris Capelj. Za sva pitanja oko 2. zadatka, javite se na mail: hcapelj1@etf.unsa.ba",
+                    "use_markers": true
+                }
+            ],
+            "compile": [],
+            "compile[debug]": [],
+            "execute": {
+                "environment": {
+                    "stdin": "3 x 3\n0 0 0 \n0 1 0\n0 0 2"
+                },
+                "expect": [
+                    "Unesite dimenziju matrice u formatu m x n: Unesite elemente matrice:\nElementi 1. reda: Elementi 2. reda: Elementi 3. reda: \nRaspon matrice je od (2,2) do (3,3)."
+                ]
+            },
+            "debug": [],
+            "profile[memcheck]": {
+                "environment": {
+                    "stdin": "3 x 3\n0 0 0 \n0 1 0\n0 0 2"
+                }
+            },
+            "profile[sgcheck]": {
+                "environment": {
+                    "stdin": "3 x 3\n0 0 0 \n0 1 0\n0 0 2"
+                }
+            }
+        },
+        {
+            "id": 3,
+            "name": "Test 3",
+            "patch": [
+                {
+                    "position": "main",
+                    "code": "\/\/ AT 3: Test matrice dimenzija 3 x 2 - nul matrica\n    {\n        _main();\n    }",
+                    "use_markers": true
+                },
+                {
+                    "position": "top_of_file",
+                    "code": "\/\/ Autor autotestova za zadatak 2 je Haris Capelj. Za sva pitanja oko 2. zadatka, javite se na mail: hcapelj1@etf.unsa.ba",
+                    "use_markers": true
+                }
+            ],
+            "compile": [],
+            "compile[debug]": [],
+            "execute": {
+                "environment": {
+                    "stdin": "3 x 2\n0 0\n0 0\n0 0\n"
+                },
+                "expect": [
+                    "Unesite dimenziju matrice u formatu m x n: Unesite elemente matrice:\nElementi 1. reda: Elementi 2. reda: Elementi 3. reda:  IZUZETAK: Raspon nije definiran za nul-matricu ili praznu matricu!"
+                ]
+            },
+            "debug": [],
+            "profile[memcheck]": {
+                "environment": {
+                    "stdin": "3 x 2\n0 0\n0 0\n0 0\n"
+                }
+            },
+            "profile[sgcheck]": {
+                "environment": {
+                    "stdin": "3 x 2\n0 0\n0 0\n0 0\n"
+                }
+            }
+        },
+        {
+            "id": 4,
+            "name": "Test 4",
+            "patch": [
+                {
+                    "position": "main",
+                    "code": "\/\/ AT 4: Test matrice dimenzija 0 x 0 - nema matrice\n    {\n          _main();\n    }",
+                    "use_markers": true
+                },
+                {
+                    "position": "top_of_file",
+                    "code": "\/\/ Autor autotestova za zadatak 2 je Haris Capelj. Za sva pitanja oko 2. zadatka, javite se na mail: hcapelj1@etf.unsa.ba",
+                    "use_markers": true
+                }
+            ],
+            "compile": [],
+            "compile[debug]": [],
+            "execute": {
+                "environment": {
+                    "stdin": "0 x 0"
+                },
+                "expect": [
+                    "Unesite dimenziju matrice u formatu m x n: Unesite elemente matrice:\nIZUZETAK: Raspon nije definiran za nul-matricu ili praznu matricu!"
+                ]
+            },
+            "debug": [],
+            "profile[memcheck]": {
+                "environment": {
+                    "stdin": "0 x 0"
+                }
+            },
+            "profile[sgcheck]": {
+                "environment": {
+                    "stdin": "0 x 0"
+                }
+            }
+        }
+    ]
+}
