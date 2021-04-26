@@ -1,0 +1,209 @@
+{
+    "id": 0,
+    "name": "Tehnike programiranja (2020\/2021), Zada\u0107a 2, Zadatak 5",
+    "languages": [
+        "C++"
+    ],
+    "tools": {
+        "compile": {
+            "require": "g++",
+            "features": [
+                "optimize",
+                "warn",
+                "pedantic",
+                "C++14"
+            ]
+        },
+        "compile[debug]": {
+            "require": "g++",
+            "features": [
+                "debug",
+                "C++14"
+            ]
+        },
+        "execute": {
+            "environment": {
+                "timeout": 10,
+                "memory": 1000000
+            }
+        },
+        "debug": [],
+        "profile[memcheck]": {
+            "require": "valgrind",
+            "features": [
+                "memcheck"
+            ],
+            "environment": {
+                "timeout": 10
+            }
+        },
+        "profile[sgcheck]": {
+            "require": "valgrind",
+            "features": [
+                "sgcheck"
+            ],
+            "environment": {
+                "timeout": 10
+            }
+        }
+    },
+    "tests": [
+        {
+            "id": 1,
+            "name": "Test 1",
+            "options": [
+                "silent",
+                "terminate"
+            ],
+            "compile": []
+        },
+        {
+            "id": 2,
+            "name": "Test 2",
+            "patch": [
+                {
+                    "position": "top_of_file",
+                    "code": "\/\/ Za sva pitanja vezana za zadatak 2, javiti se na mail: mz14970@etf.unsa.ba",
+                    "use_markers": true
+                },
+                {
+                    "position": "main",
+                    "code": "\/\/ AT 1: Test main dijela programa\n\t{\n\t\t_main();\n\t}",
+                    "use_markers": true
+                }
+            ],
+            "compile": [],
+            "compile[debug]": [],
+            "execute": {
+                "environment": {
+                    "stdin": "2\nMujo Mujic\nIme Prezime\nMujo Mujic\nNema"
+                },
+                "expect": [
+                    "Unesite broj ljudi koji su optuzeni za prepisivanje\/prodavanje zadaca: Unesite ime optuzenog: Unesite ime optuzenog: Duzina spiska: 2 \nSpisak trenutno optuzenih:\nMujo Mujic\nIme Prezime\nUnesite ime osobe oslobodjene optuzbi: Spisak trenutno optuzenih:\nIme Prezime\nUnesite ime novog optuzenog: Spisak trenutno optuzenih:\nNema\nIme Prezime\n"
+                ]
+            },
+            "debug": [],
+            "profile[memcheck]": {
+                "environment": {
+                    "stdin": "2\nMujo Mujic\nIme Prezime\nMujo Mujic\nNema"
+                }
+            },
+            "profile[sgcheck]": {
+                "environment": {
+                    "stdin": "2\nMujo Mujic\nIme Prezime\nMujo Mujic\nNema"
+                }
+            }
+        },
+        {
+            "id": 3,
+            "name": "Test 3",
+            "patch": [
+                {
+                    "position": "top_of_file",
+                    "code": "\/\/ Za sva pitanja vezana za zadatak 2, javiti se na mail: mz14970@etf.unsa.ba",
+                    "use_markers": true
+                },
+                {
+                    "position": "main",
+                    "code": "\/\/ AT 2: Test main dijela programa\n\t{\n\t\t_main();\n\t}",
+                    "use_markers": true
+                }
+            ],
+            "compile": [],
+            "compile[debug]": [],
+            "execute": {
+                "environment": {
+                    "stdin": "3\nNeko Nekic\nNiko Nikic\nFuad Fudic\nNiko Nikic\nOptuzena osoba\n"
+                },
+                "expect": [
+                    "Unesite broj ljudi koji su optuzeni za prepisivanje\/prodavanje zadaca: Unesite ime optuzenog: Unesite ime optuzenog: Unesite ime optuzenog: Duzina spiska: 3\nSpisak trenutno optuzenih:\nNeko Nekic\nNiko Nikic\nFuad Fudic\nUnesite ime osobe oslobodjene optuzbi: Spisak trenutno optuzenih:\nNeko Nekic\nFuad Fudic\nUnesite ime novog optuzenog: Spisak trenutno optuzenih:\nNeko Nekic\nOptuzena osoba\nFuad Fudic\n"
+                ]
+            },
+            "debug": [],
+            "profile[memcheck]": {
+                "environment": {
+                    "stdin": "3\nNeko Nekic\nNiko Nikic\nFuad Fudic\nNiko Nikic\nOptuzena osoba\n"
+                }
+            },
+            "profile[sgcheck]": {
+                "environment": {
+                    "stdin": "3\nNeko Nekic\nNiko Nikic\nFuad Fudic\nNiko Nikic\nOptuzena osoba\n"
+                }
+            }
+        },
+        {
+            "id": 4,
+            "name": "Test 4",
+            "patch": [
+                {
+                    "position": "top_of_file",
+                    "code": "\/\/ Za sva pitanja vezana za zadatak 2, javiti se na mail: mz14970@etf.unsa.ba",
+                    "use_markers": true
+                },
+                {
+                    "position": "main",
+                    "code": "\/\/ AT 3: Test main dijela programa (izuzetak)\n\t{\n\t\t_main();\n\t}",
+                    "use_markers": true
+                }
+            ],
+            "compile": [],
+            "compile[debug]": [],
+            "execute": {
+                "environment": {
+                    "stdin": "3\nNeko Nekic\nNiko Nikic\nFuad Fudic\nMario Maric"
+                },
+                "expect": [
+                    "Unesite broj ljudi koji su optuzeni za prepisivanje\/prodavanje zadaca: Unesite ime optuzenog: Unesite ime optuzenog: Unesite ime optuzenog: Duzina spiska: 3\nSpisak trenutno optuzenih:\nNeko Nekic\nNiko Nikic\nFuad Fudic\nUnesite ime osobe oslobodjene optuzbi: Osoba sa imenom Mario Maric nije bila optuzena!"
+                ]
+            },
+            "debug": [],
+            "profile[memcheck]": {
+                "environment": {
+                    "stdin": "3\nNeko Nekic\nNiko Nikic\nFuad Fudic\nMario Maric"
+                }
+            },
+            "profile[sgcheck]": {
+                "environment": {
+                    "stdin": "3\nNeko Nekic\nNiko Nikic\nFuad Fudic\nMario Maric"
+                }
+            }
+        },
+        {
+            "id": 5,
+            "name": "Test 5",
+            "patch": [
+                {
+                    "position": "top_of_file",
+                    "code": "\/\/ Za sva pitanja vezana za zadatak 2, javiti se na mail: mz14970@etf.unsa.ba",
+                    "use_markers": true
+                },
+                {
+                    "position": "main",
+                    "code": "\/\/ AT 4: Test main dijela programa (Neuspjela alokacija vektora stringova)\n    {\n        _main();\n    }",
+                    "use_markers": true
+                }
+            ],
+            "compile": [],
+            "compile[debug]": [],
+            "execute": {
+                "environment": {
+                    "stdin": "100000000"
+                },
+                "expect": [
+                    "Unesite broj ljudi koji su optuzeni za prepisivanje\/prodavanje zadaca: Nedovoljno memorije!"
+                ]
+            },
+            "debug": [],
+            "profile[memcheck]": {
+                "environment": {
+                    "stdin": "100000000"
+                }
+            },
+            "profile[sgcheck]": {
+                "environment": {
+                    "stdin": "100000000"
+                }
+            }
+        }
+    ]
+}

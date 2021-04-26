@@ -1,0 +1,221 @@
+{
+    "buildhost_description": {
+        "id": "lab002-c03",
+        "os": "Linux 2.6.32-754.2.1.el6.x86_64 x86_64\n\"CentOS release 6.10 (Final)\"\n"
+    },
+    "tools": {
+        "compile": "g++ (GCC) 6.2.0",
+        "compile[debug]": "g++ (GCC) 6.2.0",
+        "debug": "GNU gdb (GDB) Red Hat Enterprise Linux (7.2-92.el6)",
+        "profile[memcheck]": "valgrind-3.8.1",
+        "profile[sgcheck]": "valgrind-3.8.1"
+    },
+    "status": 4,
+    "test_results": {
+        "2": {
+            "success": true,
+            "status": 1,
+            "tools": {
+                "patch": {
+                    "success": true
+                },
+                "compile": {
+                    "status": 1,
+                    "duration": 0,
+                    "output": "",
+                    "exit_code": 0,
+                    "success": true,
+                    "parsed_output": []
+                },
+                "compile[debug]": {
+                    "status": 1,
+                    "duration": 1,
+                    "output": "",
+                    "exit_code": 0,
+                    "success": true,
+                    "parsed_output": []
+                },
+                "execute": {
+                    "output": "Unesi broj elemenata niza (ne vise od 100): \nUnesi elemente niza: \nUnesi broj elemenata deka: \nUnesi elemente deka: \nVektor zajednickih elemenata niza i deka ima 5 elemenata\nZajednicki elementi glase: 5 2 4 6 3 ",
+                    "duration": 0,
+                    "status": 1,
+                    "exit_code": 0,
+                    "success": true
+                },
+                "debug": {
+                    "success": true
+                },
+                "profile[memcheck]": {
+                    "status": 1,
+                    "duration": 0,
+                    "output": "==32536== Memcheck, a memory error detector\n==32536== Copyright (C) 2002-2012, and GNU GPL'd, by Julian Seward et al.\n==32536== Using Valgrind-3.8.1 and LibVEX; rerun with -h for copyright info\n==32536== Command: outputFSwDL1\n==32536==\nUnesi broj elemenata niza (ne vise od 100):\nUnesi elemente niza:\nUnesi broj elemenata deka:\nUnesi elemente deka:\nVektor zajednickih elemenata niza i deka ima 5 elemenata\nZajednicki elementi glase: 5 2 4 6 3 ==32536==\n==32536== HEAP SUMMARY:\n==32536==     in use at exit: 72,704 bytes in 1 blocks\n==32536==   total heap usage: 8 allocs, 7 frees, 73,360 bytes allocated\n==32536==\n==32536== LEAK SUMMARY:\n==32536==    definitely lost: 0 bytes in 0 blocks\n==32536==    indirectly lost: 0 bytes in 0 blocks\n==32536==      possibly lost: 0 bytes in 0 blocks\n==32536==    still reachable: 72,704 bytes in 1 blocks\n==32536==         suppressed: 0 bytes in 0 blocks\n==32536== Reachable blocks (those to which a pointer was found) are not shown.\n==32536== To see them, rerun with: --leak-check=full --show-reachable=yes\n==32536==\n==32536== For counts of detected and suppressed errors, rerun with: -v\n==32536== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 8 from 6)",
+                    "exit_code": 0,
+                    "success": true,
+                    "parsed_output": []
+                },
+                "profile[sgcheck]": {
+                    "status": 1,
+                    "duration": 3,
+                    "output": "==32539== exp-sgcheck, a stack and global array overrun detector\n==32539== NOTE: This is an Experimental-Class Valgrind Tool\n==32539== Copyright (C) 2003-2012, and GNU GPL'd, by OpenWorks Ltd et al.\n==32539== Using Valgrind-3.8.1 and LibVEX; rerun with -h for copyright info\n==32539== Command: outputFSwDL1\n==32539==\nchase_cuOff: no entry for 0x223a0\nchase_cuOff: no entry for 0x223df\nchase_cuOff: no entry for 0x37ea8\nchase_cuOff: no entry for 0x37eec\nchase_cuOff: no entry for 0x3b080\nchase_cuOff: no entry for 0x3b0cf\nchase_cuOff: no entry for 0xcb05b\nchase_cuOff: no entry for 0xcb060\nchase_cuOff: no entry for 0xcb092\nchase_cuOff: no entry for 0xcb097\nchase_cuOff: no entry for 0x223a0\nchase_cuOff: no entry for 0x223df\nchase_cuOff: no entry for 0x37ea8\nchase_cuOff: no entry for 0x37eec\nchase_cuOff: no entry for 0x3b080\nchase_cuOff: no entry for 0x3b0cf\nchase_cuOff: no entry for 0xcb05b\nchase_cuOff: no entry for 0xcb060\nchase_cuOff: no entry for 0xcb092\nchase_cuOff: no entry for 0xcb097\nchase_cuOff: no entry for 0x223a0\nchase_cuOff: no entry for 0x223df\nchase_cuOff: no entry for 0x37ea8\nchase_cuOff: no entry for 0x37eec\nchase_cuOff: no entry for 0x3b080\nchase_cuOff: no entry for 0x3b0cf\nchase_cuOff: no entry for 0xcb05b\nchase_cuOff: no entry for 0xcb060\nchase_cuOff: no entry for 0xcb092\nchase_cuOff: no entry for 0xcb097\nchase_cuOff: no entry for 0x223a0\nchase_cuOff: no entry for 0x223df\nchase_cuOff: no entry for 0x37ea8\nchase_cuOff: no entry for 0x37eec\nchase_cuOff: no entry for 0x3b080\nchase_cuOff: no entry for 0x3b0cf\nchase_cuOff: no entry for 0xcb05b\nchase_cuOff: no entry for 0xcb060\nchase_cuOff: no entry for 0xcb092\nchase_cuOff: no entry for 0xcb097\nchase_cuOff: no entry for 0x223a0\nchase_cuOff: no entry for 0x223df\nchase_cuOff: no entry for 0x37ea8\nchase_cuOff: no entry for 0x37eec\nchase_cuOff: no entry for 0x3b080\nchase_cuOff: no entry for 0x3b0cf\nchase_cuOff: no entry for 0xcb05b\nchase_cuOff: no entry for 0xcb060\nchase_cuOff: no entry for 0xcb092\nchase_cuOff: no entry for 0xcb097\nchase_cuOff: no entry for 0x223a0\nchase_cuOff: no entry for 0x223df\nchase_cuOff: no entry for 0x37ea8\nchase_cuOff: no entry for 0x37eec\nchase_cuOff: no entry for 0x3b080\nchase_cuOff: no entry for 0x3b0cf\nchase_cuOff: no entry for 0xcb05b\nchase_cuOff: no entry for 0xcb060\nchase_cuOff: no entry for 0xcb092\nchase_cuOff: no entry for 0xcb097\nchase_cuOff: no entry for 0x223a0\nchase_cuOff: no entry for 0x223df\nchase_cuOff: no entry for 0x37ea8\nchase_cuOff: no entry for 0x37eec\nchase_cuOff: no entry for 0x3b080\nchase_cuOff: no entry for 0x3b0cf\nchase_cuOff: no entry for 0xcb05b\nchase_cuOff: no entry for 0xcb060\nchase_cuOff: no entry for 0xcb092\nchase_cuOff: no entry for 0xcb097\nchase_cuOff: no entry for 0x223a0\nchase_cuOff: no entry for 0x223df\nchase_cuOff: no entry for 0x37ea8\nchase_cuOff: no entry for 0x37eec\nchase_cuOff: no entry for 0x3b080\nchase_cuOff: no entry for 0x3b0cf\nchase_cuOff: no entry for 0xcb05b\nchase_cuOff: no entry for 0xcb060\nchase_cuOff: no entry for 0xcb092\nchase_cuOff: no entry for 0xcb097\nchase_cuOff: no entry for 0x223a0\nchase_cuOff: no entry for 0x223df\nchase_cuOff: no entry for 0x37ea8\nchase_cuOff: no entry for 0x37eec\nchase_cuOff: no entry for 0x3b080\nchase_cuOff: no entry for 0x3b0cf\nchase_cuOff: no entry for 0xcb05b\nchase_cuOff: no entry for 0xcb060\nchase_cuOff: no entry for 0xcb092\nchase_cuOff: no entry for 0xcb097\nchase_cuOff: no entry for 0x223a0\nchase_cuOff: no entry for 0x223df\nchase_cuOff: no entry for 0x37ea8\nchase_cuOff: no entry for 0x37eec\nchase_cuOff: no entry for 0x3b080\nchase_cuOff: no entry for 0x3b0cf\nchase_cuOff: no entry for 0xcb05b\nchase_cuOff: no entry for 0xcb060\nchase_cuOff: no entry for 0xcb092\nchase_cuOff: no entry for 0xcb097\nchase_cuOff: no entry for 0x223a0\nchase_cuOff: no entry for 0x223df\nchase_cuOff: no entry for 0x37ea8\nchase_cuOff: no entry for 0x37eec\nchase_cuOff: no entry for 0x3b080\nchase_cuOff: no entry for 0x3b0cf\nchase_cuOff: no entry for 0xcb05b\nchase_cuOff: no entry for 0xcb060\nchase_cuOff: no entry for 0xcb092\nchase_cuOff: no entry for 0xcb097\nchase_cuOff: no entry for 0x223a0\nchase_cuOff: no entry for 0x223df\nchase_cuOff: no entry for 0x37ea8\nchase_cuOff: no entry for 0x37eec\nchase_cuOff: no entry for 0x3b080\nchase_cuOff: no entry for 0x3b0cf\nchase_cuOff: no entry for 0xcb05b\nchase_cuOff: no entry for 0xcb060\nchase_cuOff: no entry for 0xcb092\nchase_cuOff: no entry for 0xcb097\n\n: Invalid cuOff = 0x56dfe\n--32539-- WARNING: Serious error when reading debug info\n--32539-- When reading debug info from /opt/gcc-6.2.0/lib64/libstdc++.so.6.0.22:\n--32539-- resolve_variable_types: cuOff does not refer to a known type\nUnesi broj elemenata niza (ne vise od 100):\nUnesi elemente niza:\nUnesi broj elemenata deka:\nUnesi elemente deka:\nVektor zajednickih elemenata niza i deka ima 5 elemenata\nZajednicki elementi glase: 5 2 4 6 3 ==32539==\n==32539== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 32 from 32)",
+                    "exit_code": 0,
+                    "success": true,
+                    "parsed_output": []
+                }
+            }
+        },
+        "3": {
+            "success": true,
+            "status": 1,
+            "tools": {
+                "patch": {
+                    "success": true
+                },
+                "compile": {
+                    "status": 1,
+                    "duration": 0,
+                    "output": "",
+                    "exit_code": 0,
+                    "success": true,
+                    "parsed_output": []
+                },
+                "compile[debug]": {
+                    "status": 1,
+                    "duration": 1,
+                    "output": "",
+                    "exit_code": 0,
+                    "success": true,
+                    "parsed_output": []
+                },
+                "execute": {
+                    "output": "Unesi broj elemenata niza (ne vise od 100): \nUnesi elemente niza: \nUnesi broj elemenata deka: \nUnesi elemente deka: \nVektor zajednickih elemenata niza i deka ima 0 elemenata\nZajednicki elementi glase: ",
+                    "duration": 0,
+                    "status": 1,
+                    "exit_code": 0,
+                    "success": true
+                },
+                "debug": {
+                    "success": true
+                },
+                "profile[memcheck]": {
+                    "status": 1,
+                    "duration": 1,
+                    "output": "==32572== Memcheck, a memory error detector\n==32572== Copyright (C) 2002-2012, and GNU GPL'd, by Julian Seward et al.\n==32572== Using Valgrind-3.8.1 and LibVEX; rerun with -h for copyright info\n==32572== Command: outputQDlrz6\n==32572==\nUnesi broj elemenata niza (ne vise od 100):\nUnesi elemente niza:\nUnesi broj elemenata deka:\nUnesi elemente deka:\nVektor zajednickih elemenata niza i deka ima 0 elemenata\nZajednicki elementi glase: ==32572==\n==32572== HEAP SUMMARY:\n==32572==     in use at exit: 72,704 bytes in 1 blocks\n==32572==   total heap usage: 3 allocs, 2 frees, 73,280 bytes allocated\n==32572==\n==32572== LEAK SUMMARY:\n==32572==    definitely lost: 0 bytes in 0 blocks\n==32572==    indirectly lost: 0 bytes in 0 blocks\n==32572==      possibly lost: 0 bytes in 0 blocks\n==32572==    still reachable: 72,704 bytes in 1 blocks\n==32572==         suppressed: 0 bytes in 0 blocks\n==32572== Reachable blocks (those to which a pointer was found) are not shown.\n==32572== To see them, rerun with: --leak-check=full --show-reachable=yes\n==32572==\n==32572== For counts of detected and suppressed errors, rerun with: -v\n==32572== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 8 from 6)",
+                    "exit_code": 0,
+                    "success": true,
+                    "parsed_output": []
+                },
+                "profile[sgcheck]": {
+                    "status": 1,
+                    "duration": 2,
+                    "output": "==32575== exp-sgcheck, a stack and global array overrun detector\n==32575== NOTE: This is an Experimental-Class Valgrind Tool\n==32575== Copyright (C) 2003-2012, and GNU GPL'd, by OpenWorks Ltd et al.\n==32575== Using Valgrind-3.8.1 and LibVEX; rerun with -h for copyright info\n==32575== Command: outputQDlrz6\n==32575==\nchase_cuOff: no entry for 0x223a0\nchase_cuOff: no entry for 0x223df\nchase_cuOff: no entry for 0x37ea8\nchase_cuOff: no entry for 0x37eec\nchase_cuOff: no entry for 0x3b080\nchase_cuOff: no entry for 0x3b0cf\nchase_cuOff: no entry for 0xcb05b\nchase_cuOff: no entry for 0xcb060\nchase_cuOff: no entry for 0xcb092\nchase_cuOff: no entry for 0xcb097\nchase_cuOff: no entry for 0x223a0\nchase_cuOff: no entry for 0x223df\nchase_cuOff: no entry for 0x37ea8\nchase_cuOff: no entry for 0x37eec\nchase_cuOff: no entry for 0x3b080\nchase_cuOff: no entry for 0x3b0cf\nchase_cuOff: no entry for 0xcb05b\nchase_cuOff: no entry for 0xcb060\nchase_cuOff: no entry for 0xcb092\nchase_cuOff: no entry for 0xcb097\nchase_cuOff: no entry for 0x223a0\nchase_cuOff: no entry for 0x223df\nchase_cuOff: no entry for 0x37ea8\nchase_cuOff: no entry for 0x37eec\nchase_cuOff: no entry for 0x3b080\nchase_cuOff: no entry for 0x3b0cf\nchase_cuOff: no entry for 0xcb05b\nchase_cuOff: no entry for 0xcb060\nchase_cuOff: no entry for 0xcb092\nchase_cuOff: no entry for 0xcb097\nchase_cuOff: no entry for 0x223a0\nchase_cuOff: no entry for 0x223df\nchase_cuOff: no entry for 0x37ea8\nchase_cuOff: no entry for 0x37eec\nchase_cuOff: no entry for 0x3b080\nchase_cuOff: no entry for 0x3b0cf\nchase_cuOff: no entry for 0xcb05b\nchase_cuOff: no entry for 0xcb060\nchase_cuOff: no entry for 0xcb092\nchase_cuOff: no entry for 0xcb097\nchase_cuOff: no entry for 0x223a0\nchase_cuOff: no entry for 0x223df\nchase_cuOff: no entry for 0x37ea8\nchase_cuOff: no entry for 0x37eec\nchase_cuOff: no entry for 0x3b080\nchase_cuOff: no entry for 0x3b0cf\nchase_cuOff: no entry for 0xcb05b\nchase_cuOff: no entry for 0xcb060\nchase_cuOff: no entry for 0xcb092\nchase_cuOff: no entry for 0xcb097\nchase_cuOff: no entry for 0x223a0\nchase_cuOff: no entry for 0x223df\nchase_cuOff: no entry for 0x37ea8\nchase_cuOff: no entry for 0x37eec\nchase_cuOff: no entry for 0x3b080\nchase_cuOff: no entry for 0x3b0cf\nchase_cuOff: no entry for 0xcb05b\nchase_cuOff: no entry for 0xcb060\nchase_cuOff: no entry for 0xcb092\nchase_cuOff: no entry for 0xcb097\nchase_cuOff: no entry for 0x223a0\nchase_cuOff: no entry for 0x223df\nchase_cuOff: no entry for 0x37ea8\nchase_cuOff: no entry for 0x37eec\nchase_cuOff: no entry for 0x3b080\nchase_cuOff: no entry for 0x3b0cf\nchase_cuOff: no entry for 0xcb05b\nchase_cuOff: no entry for 0xcb060\nchase_cuOff: no entry for 0xcb092\nchase_cuOff: no entry for 0xcb097\nchase_cuOff: no entry for 0x223a0\nchase_cuOff: no entry for 0x223df\nchase_cuOff: no entry for 0x37ea8\nchase_cuOff: no entry for 0x37eec\nchase_cuOff: no entry for 0x3b080\nchase_cuOff: no entry for 0x3b0cf\nchase_cuOff: no entry for 0xcb05b\nchase_cuOff: no entry for 0xcb060\nchase_cuOff: no entry for 0xcb092\nchase_cuOff: no entry for 0xcb097\nchase_cuOff: no entry for 0x223a0\nchase_cuOff: no entry for 0x223df\nchase_cuOff: no entry for 0x37ea8\nchase_cuOff: no entry for 0x37eec\nchase_cuOff: no entry for 0x3b080\nchase_cuOff: no entry for 0x3b0cf\nchase_cuOff: no entry for 0xcb05b\nchase_cuOff: no entry for 0xcb060\nchase_cuOff: no entry for 0xcb092\nchase_cuOff: no entry for 0xcb097\nchase_cuOff: no entry for 0x223a0\nchase_cuOff: no entry for 0x223df\nchase_cuOff: no entry for 0x37ea8\nchase_cuOff: no entry for 0x37eec\nchase_cuOff: no entry for 0x3b080\nchase_cuOff: no entry for 0x3b0cf\nchase_cuOff: no entry for 0xcb05b\nchase_cuOff: no entry for 0xcb060\nchase_cuOff: no entry for 0xcb092\nchase_cuOff: no entry for 0xcb097\nchase_cuOff: no entry for 0x223a0\nchase_cuOff: no entry for 0x223df\nchase_cuOff: no entry for 0x37ea8\nchase_cuOff: no entry for 0x37eec\nchase_cuOff: no entry for 0x3b080\nchase_cuOff: no entry for 0x3b0cf\nchase_cuOff: no entry for 0xcb05b\nchase_cuOff: no entry for 0xcb060\nchase_cuOff: no entry for 0xcb092\nchase_cuOff: no entry for 0xcb097\nchase_cuOff: no entry for 0x223a0\nchase_cuOff: no entry for 0x223df\nchase_cuOff: no entry for 0x37ea8\nchase_cuOff: no entry for 0x37eec\nchase_cuOff: no entry for 0x3b080\nchase_cuOff: no entry for 0x3b0cf\nchase_cuOff: no entry for 0xcb05b\nchase_cuOff: no entry for 0xcb060\nchase_cuOff: no entry for 0xcb092\nchase_cuOff: no entry for 0xcb097\n\n: Invalid cuOff = 0x56dfe\n--32575-- WARNING: Serious error when reading debug info\n--32575-- When reading debug info from /opt/gcc-6.2.0/lib64/libstdc++.so.6.0.22:\n--32575-- resolve_variable_types: cuOff does not refer to a known type\nUnesi broj elemenata niza (ne vise od 100):\nUnesi elemente niza:\nUnesi broj elemenata deka:\nUnesi elemente deka:\nVektor zajednickih elemenata niza i deka ima 0 elemenata\nZajednicki elementi glase: ==32575==\n==32575== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 32 from 32)",
+                    "exit_code": 0,
+                    "success": true,
+                    "parsed_output": []
+                }
+            }
+        },
+        "4": {
+            "success": true,
+            "status": 1,
+            "tools": {
+                "patch": {
+                    "success": true
+                },
+                "compile": {
+                    "status": 1,
+                    "duration": 0,
+                    "output": "",
+                    "exit_code": 0,
+                    "success": true,
+                    "parsed_output": []
+                },
+                "compile[debug]": {
+                    "status": 1,
+                    "duration": 1,
+                    "output": "",
+                    "exit_code": 0,
+                    "success": true,
+                    "parsed_output": []
+                },
+                "execute": {
+                    "output": "Unesi broj elemenata niza (ne vise od 100): \nUnesi elemente niza: \nUnesi broj elemenata deka: \nUnesi elemente deka: \nVektor zajednickih elemenata niza i deka ima 0 elemenata\nZajednicki elementi glase: ",
+                    "duration": 0,
+                    "status": 1,
+                    "exit_code": 0,
+                    "success": true
+                },
+                "debug": {
+                    "success": true
+                },
+                "profile[memcheck]": {
+                    "status": 1,
+                    "duration": 1,
+                    "output": "==32608== Memcheck, a memory error detector\n==32608== Copyright (C) 2002-2012, and GNU GPL'd, by Julian Seward et al.\n==32608== Using Valgrind-3.8.1 and LibVEX; rerun with -h for copyright info\n==32608== Command: output1QI4EB\n==32608==\nUnesi broj elemenata niza (ne vise od 100):\nUnesi elemente niza:\nUnesi broj elemenata deka:\nUnesi elemente deka:\nVektor zajednickih elemenata niza i deka ima 0 elemenata\nZajednicki elementi glase: ==32608==\n==32608== HEAP SUMMARY:\n==32608==     in use at exit: 72,704 bytes in 1 blocks\n==32608==   total heap usage: 3 allocs, 2 frees, 73,280 bytes allocated\n==32608==\n==32608== LEAK SUMMARY:\n==32608==    definitely lost: 0 bytes in 0 blocks\n==32608==    indirectly lost: 0 bytes in 0 blocks\n==32608==      possibly lost: 0 bytes in 0 blocks\n==32608==    still reachable: 72,704 bytes in 1 blocks\n==32608==         suppressed: 0 bytes in 0 blocks\n==32608== Reachable blocks (those to which a pointer was found) are not shown.\n==32608== To see them, rerun with: --leak-check=full --show-reachable=yes\n==32608==\n==32608== For counts of detected and suppressed errors, rerun with: -v\n==32608== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 8 from 6)",
+                    "exit_code": 0,
+                    "success": true,
+                    "parsed_output": []
+                },
+                "profile[sgcheck]": {
+                    "status": 1,
+                    "duration": 2,
+                    "output": "==32611== exp-sgcheck, a stack and global array overrun detector\n==32611== NOTE: This is an Experimental-Class Valgrind Tool\n==32611== Copyright (C) 2003-2012, and GNU GPL'd, by OpenWorks Ltd et al.\n==32611== Using Valgrind-3.8.1 and LibVEX; rerun with -h for copyright info\n==32611== Command: output1QI4EB\n==32611==\nchase_cuOff: no entry for 0x223a0\nchase_cuOff: no entry for 0x223df\nchase_cuOff: no entry for 0x37ea8\nchase_cuOff: no entry for 0x37eec\nchase_cuOff: no entry for 0x3b080\nchase_cuOff: no entry for 0x3b0cf\nchase_cuOff: no entry for 0xcb05b\nchase_cuOff: no entry for 0xcb060\nchase_cuOff: no entry for 0xcb092\nchase_cuOff: no entry for 0xcb097\nchase_cuOff: no entry for 0x223a0\nchase_cuOff: no entry for 0x223df\nchase_cuOff: no entry for 0x37ea8\nchase_cuOff: no entry for 0x37eec\nchase_cuOff: no entry for 0x3b080\nchase_cuOff: no entry for 0x3b0cf\nchase_cuOff: no entry for 0xcb05b\nchase_cuOff: no entry for 0xcb060\nchase_cuOff: no entry for 0xcb092\nchase_cuOff: no entry for 0xcb097\nchase_cuOff: no entry for 0x223a0\nchase_cuOff: no entry for 0x223df\nchase_cuOff: no entry for 0x37ea8\nchase_cuOff: no entry for 0x37eec\nchase_cuOff: no entry for 0x3b080\nchase_cuOff: no entry for 0x3b0cf\nchase_cuOff: no entry for 0xcb05b\nchase_cuOff: no entry for 0xcb060\nchase_cuOff: no entry for 0xcb092\nchase_cuOff: no entry for 0xcb097\nchase_cuOff: no entry for 0x223a0\nchase_cuOff: no entry for 0x223df\nchase_cuOff: no entry for 0x37ea8\nchase_cuOff: no entry for 0x37eec\nchase_cuOff: no entry for 0x3b080\nchase_cuOff: no entry for 0x3b0cf\nchase_cuOff: no entry for 0xcb05b\nchase_cuOff: no entry for 0xcb060\nchase_cuOff: no entry for 0xcb092\nchase_cuOff: no entry for 0xcb097\nchase_cuOff: no entry for 0x223a0\nchase_cuOff: no entry for 0x223df\nchase_cuOff: no entry for 0x37ea8\nchase_cuOff: no entry for 0x37eec\nchase_cuOff: no entry for 0x3b080\nchase_cuOff: no entry for 0x3b0cf\nchase_cuOff: no entry for 0xcb05b\nchase_cuOff: no entry for 0xcb060\nchase_cuOff: no entry for 0xcb092\nchase_cuOff: no entry for 0xcb097\nchase_cuOff: no entry for 0x223a0\nchase_cuOff: no entry for 0x223df\nchase_cuOff: no entry for 0x37ea8\nchase_cuOff: no entry for 0x37eec\nchase_cuOff: no entry for 0x3b080\nchase_cuOff: no entry for 0x3b0cf\nchase_cuOff: no entry for 0xcb05b\nchase_cuOff: no entry for 0xcb060\nchase_cuOff: no entry for 0xcb092\nchase_cuOff: no entry for 0xcb097\nchase_cuOff: no entry for 0x223a0\nchase_cuOff: no entry for 0x223df\nchase_cuOff: no entry for 0x37ea8\nchase_cuOff: no entry for 0x37eec\nchase_cuOff: no entry for 0x3b080\nchase_cuOff: no entry for 0x3b0cf\nchase_cuOff: no entry for 0xcb05b\nchase_cuOff: no entry for 0xcb060\nchase_cuOff: no entry for 0xcb092\nchase_cuOff: no entry for 0xcb097\nchase_cuOff: no entry for 0x223a0\nchase_cuOff: no entry for 0x223df\nchase_cuOff: no entry for 0x37ea8\nchase_cuOff: no entry for 0x37eec\nchase_cuOff: no entry for 0x3b080\nchase_cuOff: no entry for 0x3b0cf\nchase_cuOff: no entry for 0xcb05b\nchase_cuOff: no entry for 0xcb060\nchase_cuOff: no entry for 0xcb092\nchase_cuOff: no entry for 0xcb097\nchase_cuOff: no entry for 0x223a0\nchase_cuOff: no entry for 0x223df\nchase_cuOff: no entry for 0x37ea8\nchase_cuOff: no entry for 0x37eec\nchase_cuOff: no entry for 0x3b080\nchase_cuOff: no entry for 0x3b0cf\nchase_cuOff: no entry for 0xcb05b\nchase_cuOff: no entry for 0xcb060\nchase_cuOff: no entry for 0xcb092\nchase_cuOff: no entry for 0xcb097\nchase_cuOff: no entry for 0x223a0\nchase_cuOff: no entry for 0x223df\nchase_cuOff: no entry for 0x37ea8\nchase_cuOff: no entry for 0x37eec\nchase_cuOff: no entry for 0x3b080\nchase_cuOff: no entry for 0x3b0cf\nchase_cuOff: no entry for 0xcb05b\nchase_cuOff: no entry for 0xcb060\nchase_cuOff: no entry for 0xcb092\nchase_cuOff: no entry for 0xcb097\nchase_cuOff: no entry for 0x223a0\nchase_cuOff: no entry for 0x223df\nchase_cuOff: no entry for 0x37ea8\nchase_cuOff: no entry for 0x37eec\nchase_cuOff: no entry for 0x3b080\nchase_cuOff: no entry for 0x3b0cf\nchase_cuOff: no entry for 0xcb05b\nchase_cuOff: no entry for 0xcb060\nchase_cuOff: no entry for 0xcb092\nchase_cuOff: no entry for 0xcb097\nchase_cuOff: no entry for 0x223a0\nchase_cuOff: no entry for 0x223df\nchase_cuOff: no entry for 0x37ea8\nchase_cuOff: no entry for 0x37eec\nchase_cuOff: no entry for 0x3b080\nchase_cuOff: no entry for 0x3b0cf\nchase_cuOff: no entry for 0xcb05b\nchase_cuOff: no entry for 0xcb060\nchase_cuOff: no entry for 0xcb092\nchase_cuOff: no entry for 0xcb097\n\n: Invalid cuOff = 0x56dfe\n--32611-- WARNING: Serious error when reading debug info\n--32611-- When reading debug info from /opt/gcc-6.2.0/lib64/libstdc++.so.6.0.22:\n--32611-- resolve_variable_types: cuOff does not refer to a known type\nUnesi broj elemenata niza (ne vise od 100):\nUnesi elemente niza:\nUnesi broj elemenata deka:\nUnesi elemente deka:\nVektor zajednickih elemenata niza i deka ima 0 elemenata\nZajednicki elementi glase: ==32611==\n==32611== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 32 from 32)",
+                    "exit_code": 0,
+                    "success": true,
+                    "parsed_output": []
+                }
+            }
+        },
+        "5": {
+            "success": true,
+            "status": 1,
+            "tools": {
+                "patch": {
+                    "success": true
+                },
+                "compile": {
+                    "status": 1,
+                    "duration": 0,
+                    "output": "",
+                    "exit_code": 0,
+                    "success": true,
+                    "parsed_output": []
+                },
+                "compile[debug]": {
+                    "status": 1,
+                    "duration": 1,
+                    "output": "",
+                    "exit_code": 0,
+                    "success": true,
+                    "parsed_output": []
+                },
+                "execute": {
+                    "output": "Zajednickih elemenata ima 2\nZajednicki elementi glase: m a \n",
+                    "duration": 0,
+                    "status": 1,
+                    "exit_code": 0,
+                    "success": true
+                },
+                "debug": {
+                    "success": true
+                },
+                "profile[memcheck]": {
+                    "status": 1,
+                    "duration": 1,
+                    "output": "==32644== Memcheck, a memory error detector\n==32644== Copyright (C) 2002-2012, and GNU GPL'd, by Julian Seward et al.\n==32644== Using Valgrind-3.8.1 and LibVEX; rerun with -h for copyright info\n==32644== Command: outputHqwTmx\n==32644==\nZajednickih elemenata ima 2\nZajednicki elementi glase: m a\n==32644==\n==32644== HEAP SUMMARY:\n==32644==     in use at exit: 72,704 bytes in 1 blocks\n==32644==   total heap usage: 5 allocs, 4 frees, 73,283 bytes allocated\n==32644==\n==32644== LEAK SUMMARY:\n==32644==    definitely lost: 0 bytes in 0 blocks\n==32644==    indirectly lost: 0 bytes in 0 blocks\n==32644==      possibly lost: 0 bytes in 0 blocks\n==32644==    still reachable: 72,704 bytes in 1 blocks\n==32644==         suppressed: 0 bytes in 0 blocks\n==32644== Reachable blocks (those to which a pointer was found) are not shown.\n==32644== To see them, rerun with: --leak-check=full --show-reachable=yes\n==32644==\n==32644== For counts of detected and suppressed errors, rerun with: -v\n==32644== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 8 from 6)",
+                    "exit_code": 0,
+                    "success": true,
+                    "parsed_output": []
+                },
+                "profile[sgcheck]": {
+                    "status": 1,
+                    "duration": 2,
+                    "output": "==32647== exp-sgcheck, a stack and global array overrun detector\n==32647== NOTE: This is an Experimental-Class Valgrind Tool\n==32647== Copyright (C) 2003-2012, and GNU GPL'd, by OpenWorks Ltd et al.\n==32647== Using Valgrind-3.8.1 and LibVEX; rerun with -h for copyright info\n==32647== Command: outputHqwTmx\n==32647==\nchase_cuOff: no entry for 0x223a0\nchase_cuOff: no entry for 0x223df\nchase_cuOff: no entry for 0x37ea8\nchase_cuOff: no entry for 0x37eec\nchase_cuOff: no entry for 0x3b080\nchase_cuOff: no entry for 0x3b0cf\nchase_cuOff: no entry for 0xcb05b\nchase_cuOff: no entry for 0xcb060\nchase_cuOff: no entry for 0xcb092\nchase_cuOff: no entry for 0xcb097\nchase_cuOff: no entry for 0x223a0\nchase_cuOff: no entry for 0x223df\nchase_cuOff: no entry for 0x37ea8\nchase_cuOff: no entry for 0x37eec\nchase_cuOff: no entry for 0x3b080\nchase_cuOff: no entry for 0x3b0cf\nchase_cuOff: no entry for 0xcb05b\nchase_cuOff: no entry for 0xcb060\nchase_cuOff: no entry for 0xcb092\nchase_cuOff: no entry for 0xcb097\nchase_cuOff: no entry for 0x223a0\nchase_cuOff: no entry for 0x223df\nchase_cuOff: no entry for 0x37ea8\nchase_cuOff: no entry for 0x37eec\nchase_cuOff: no entry for 0x3b080\nchase_cuOff: no entry for 0x3b0cf\nchase_cuOff: no entry for 0xcb05b\nchase_cuOff: no entry for 0xcb060\nchase_cuOff: no entry for 0xcb092\nchase_cuOff: no entry for 0xcb097\nchase_cuOff: no entry for 0x223a0\nchase_cuOff: no entry for 0x223df\nchase_cuOff: no entry for 0x37ea8\nchase_cuOff: no entry for 0x37eec\nchase_cuOff: no entry for 0x3b080\nchase_cuOff: no entry for 0x3b0cf\nchase_cuOff: no entry for 0xcb05b\nchase_cuOff: no entry for 0xcb060\nchase_cuOff: no entry for 0xcb092\nchase_cuOff: no entry for 0xcb097\nchase_cuOff: no entry for 0x223a0\nchase_cuOff: no entry for 0x223df\nchase_cuOff: no entry for 0x37ea8\nchase_cuOff: no entry for 0x37eec\nchase_cuOff: no entry for 0x3b080\nchase_cuOff: no entry for 0x3b0cf\nchase_cuOff: no entry for 0xcb05b\nchase_cuOff: no entry for 0xcb060\nchase_cuOff: no entry for 0xcb092\nchase_cuOff: no entry for 0xcb097\nchase_cuOff: no entry for 0x223a0\nchase_cuOff: no entry for 0x223df\nchase_cuOff: no entry for 0x37ea8\nchase_cuOff: no entry for 0x37eec\nchase_cuOff: no entry for 0x3b080\nchase_cuOff: no entry for 0x3b0cf\nchase_cuOff: no entry for 0xcb05b\nchase_cuOff: no entry for 0xcb060\nchase_cuOff: no entry for 0xcb092\nchase_cuOff: no entry for 0xcb097\nchase_cuOff: no entry for 0x223a0\nchase_cuOff: no entry for 0x223df\nchase_cuOff: no entry for 0x37ea8\nchase_cuOff: no entry for 0x37eec\nchase_cuOff: no entry for 0x3b080\nchase_cuOff: no entry for 0x3b0cf\nchase_cuOff: no entry for 0xcb05b\nchase_cuOff: no entry for 0xcb060\nchase_cuOff: no entry for 0xcb092\nchase_cuOff: no entry for 0xcb097\nchase_cuOff: no entry for 0x223a0\nchase_cuOff: no entry for 0x223df\nchase_cuOff: no entry for 0x37ea8\nchase_cuOff: no entry for 0x37eec\nchase_cuOff: no entry for 0x3b080\nchase_cuOff: no entry for 0x3b0cf\nchase_cuOff: no entry for 0xcb05b\nchase_cuOff: no entry for 0xcb060\nchase_cuOff: no entry for 0xcb092\nchase_cuOff: no entry for 0xcb097\nchase_cuOff: no entry for 0x223a0\nchase_cuOff: no entry for 0x223df\nchase_cuOff: no entry for 0x37ea8\nchase_cuOff: no entry for 0x37eec\nchase_cuOff: no entry for 0x3b080\nchase_cuOff: no entry for 0x3b0cf\nchase_cuOff: no entry for 0xcb05b\nchase_cuOff: no entry for 0xcb060\nchase_cuOff: no entry for 0xcb092\nchase_cuOff: no entry for 0xcb097\nchase_cuOff: no entry for 0x223a0\nchase_cuOff: no entry for 0x223df\nchase_cuOff: no entry for 0x37ea8\nchase_cuOff: no entry for 0x37eec\nchase_cuOff: no entry for 0x3b080\nchase_cuOff: no entry for 0x3b0cf\nchase_cuOff: no entry for 0xcb05b\nchase_cuOff: no entry for 0xcb060\nchase_cuOff: no entry for 0xcb092\nchase_cuOff: no entry for 0xcb097\nchase_cuOff: no entry for 0x223a0\nchase_cuOff: no entry for 0x223df\nchase_cuOff: no entry for 0x37ea8\nchase_cuOff: no entry for 0x37eec\nchase_cuOff: no entry for 0x3b080\nchase_cuOff: no entry for 0x3b0cf\nchase_cuOff: no entry for 0xcb05b\nchase_cuOff: no entry for 0xcb060\nchase_cuOff: no entry for 0xcb092\nchase_cuOff: no entry for 0xcb097\nchase_cuOff: no entry for 0x223a0\nchase_cuOff: no entry for 0x223df\nchase_cuOff: no entry for 0x37ea8\nchase_cuOff: no entry for 0x37eec\nchase_cuOff: no entry for 0x3b080\nchase_cuOff: no entry for 0x3b0cf\nchase_cuOff: no entry for 0xcb05b\nchase_cuOff: no entry for 0xcb060\nchase_cuOff: no entry for 0xcb092\nchase_cuOff: no entry for 0xcb097\n\n: Invalid cuOff = 0x56dfe\n--32647-- WARNING: Serious error when reading debug info\n--32647-- When reading debug info from /opt/gcc-6.2.0/lib64/libstdc++.so.6.0.22:\n--32647-- resolve_variable_types: cuOff does not refer to a known type\nZajednickih elemenata ima 2\nZajednicki elementi glase: m a\n==32647==\n==32647== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 32 from 32)",
+                    "exit_code": 0,
+                    "success": true,
+                    "parsed_output": []
+                }
+            }
+        }
+    },
+    "time": 1618673658
+}

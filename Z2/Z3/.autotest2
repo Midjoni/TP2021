@@ -1,0 +1,190 @@
+{
+    "id": 0,
+    "name": "Tehnike programiranja (2020\/2021), Zada\u0107a 2, Zadatak 3",
+    "languages": [
+        "C++"
+    ],
+    "tools": {
+        "compile": {
+            "require": "g++",
+            "features": [
+                "optimize",
+                "warn",
+                "pedantic",
+                "C++14"
+            ]
+        },
+        "compile[debug]": {
+            "require": "g++",
+            "features": [
+                "debug",
+                "C++14"
+            ]
+        },
+        "execute": {
+            "environment": {
+                "timeout": 10,
+                "memory": 1000000
+            }
+        },
+        "debug": [],
+        "profile[memcheck]": {
+            "require": "valgrind",
+            "features": [
+                "memcheck"
+            ],
+            "environment": {
+                "timeout": 10
+            }
+        },
+        "profile[sgcheck]": {
+            "require": "valgrind",
+            "features": [
+                "sgcheck"
+            ],
+            "environment": {
+                "timeout": 10
+            }
+        }
+    },
+    "tests": [
+        {
+            "id": 1,
+            "name": "Test 1",
+            "options": [
+                "silent",
+                "terminate"
+            ],
+            "compile": []
+        },
+        {
+            "id": 2,
+            "name": "Test 2",
+            "patch": [
+                {
+                    "position": "main",
+                    "code": "\/*\n\tAutori autotestova za zadatak 3 su:\n\t\tKemal Altwlkany i Armin Teskeredzic.\n\tZa sva pitanja obratiti se na:\n\t\tkaltwlkany1@etf.unsa.ba\n\t\tateskeredz1@etf.unsa.ba\n*\/\n\n\/\/ AT1: primjer dijaloga - main iz postavke.\n{\n\t_main();\n}"
+                },
+                {
+                    "position": "top_of_file",
+                    "code": "#include <iostream>\n#include <vector>\n#include <string>\n#include <deque>\n#include <list>\n#include <forward_list>"
+                }
+            ],
+            "compile": [],
+            "compile[debug]": [],
+            "execute": {
+                "environment": {
+                    "stdin": "10\n5 2 7 4 6 1 3 2 7 4\n10\n2 9 0 6 0 4 8 3 2 5"
+                },
+                "expect": [
+                    "Unesi broj elemenata niza (ne vise od 100): \nUnesi elemente niza: \nUnesi broj elemenata deka: \nUnesi elemente deka: \nVektor zajednickih elemenata niza i deka ima 5 elemenata\nZajednicki elementi glase: 5 2 4 6 3 "
+                ]
+            },
+            "debug": [],
+            "profile[memcheck]": {
+                "environment": {
+                    "stdin": "10\n5 2 7 4 6 1 3 2 7 4\n10\n2 9 0 6 0 4 8 3 2 5"
+                }
+            },
+            "profile[sgcheck]": {
+                "environment": {
+                    "stdin": "10\n5 2 7 4 6 1 3 2 7 4\n10\n2 9 0 6 0 4 8 3 2 5"
+                }
+            }
+        },
+        {
+            "id": 3,
+            "name": "Test 3",
+            "patch": [
+                {
+                    "position": "main",
+                    "code": "\/\/ AT2: prazan niz\n\n{\n\t_main();\n}"
+                },
+                {
+                    "position": "top_of_file",
+                    "code": "#include <iostream>\n#include <vector>\n#include <string>\n#include <deque>\n#include <list>\n#include <forward_list>"
+                }
+            ],
+            "compile": [],
+            "compile[debug]": [],
+            "execute": {
+                "environment": {
+                    "stdin": "0\n5\n10 20 344 51 51"
+                },
+                "expect": [
+                    "Unesi broj elemenata niza (ne vise od 100): \nUnesi elemente niza: Unesi broj elemenata deka: \nUnesi elemente deka: \nVektor zajednickih elemenata niza i deka ima 0 elemenata\nZajednicki elementi glase: "
+                ]
+            },
+            "debug": [],
+            "profile[memcheck]": {
+                "environment": {
+                    "stdin": "0\n5\n10 20 344 51 51"
+                }
+            },
+            "profile[sgcheck]": {
+                "environment": {
+                    "stdin": "0\n5\n10 20 344 51 51"
+                }
+            }
+        },
+        {
+            "id": 4,
+            "name": "Test 4",
+            "patch": [
+                {
+                    "position": "main",
+                    "code": "\/\/ AT3: nema zajednickih elemenata\n{\n\t_main();\n}"
+                },
+                {
+                    "position": "top_of_file",
+                    "code": "#include <iostream>\n#include <vector>\n#include <string>\n#include <deque>\n#include <list>\n#include <forward_list>"
+                }
+            ],
+            "compile": [],
+            "compile[debug]": [],
+            "execute": {
+                "environment": {
+                    "stdin": "5\n1 2 3 4 5\n2\n71 78"
+                },
+                "expect": [
+                    "Unesi broj elemenata niza (ne vise od 100): \nUnesi elemente niza: \nUnesi broj elemenata deka: \nUnesi elemente deka: \nVektor zajednickih elemenata niza i deka ima 0 elemenata\nZajednicki elementi glase: \n"
+                ]
+            },
+            "debug": [],
+            "profile[memcheck]": {
+                "environment": {
+                    "stdin": "5\n1 2 3 4 5\n2\n71 78"
+                }
+            },
+            "profile[sgcheck]": {
+                "environment": {
+                    "stdin": "5\n1 2 3 4 5\n2\n71 78"
+                }
+            }
+        },
+        {
+            "id": 5,
+            "name": "Test 5",
+            "patch": [
+                {
+                    "position": "main",
+                    "code": "\/\/ AT5: 1. container - string, 2. container - dek charova, 3. container niz charova\n\n{\n\tstd::string str = \"kemal\";\n\tstd::deque<char> dek = {'a', 'r', 'm', 'i', 'n'};\n\tchar niz[5] = {'X'};\n\tauto p6 = ZajednickiElementiBlokova(str.begin(), str.end(), dek.begin(), dek.end(), niz);\n\tstd::cout << \"Zajednickih elemenata ima \" << p6 - niz << std::endl;\n\tstd::cout << \"Zajednicki elementi glase: \";\n\tfor(int i=0; i<p6-niz; i++) std::cout << niz[i] << \" \";\n\tstd::cout << std::endl;\n\treturn 0;\n}"
+                },
+                {
+                    "position": "top_of_file",
+                    "code": "#include <iostream>\n#include <vector>\n#include <string>\n#include <deque>\n#include <list>\n#include <forward_list>\n"
+                }
+            ],
+            "compile": [],
+            "compile[debug]": [],
+            "execute": {
+                "expect": [
+                    "Zajednickih elemenata ima 2\nZajednicki elementi glase: m a "
+                ]
+            },
+            "debug": [],
+            "profile[memcheck]": [],
+            "profile[sgcheck]": []
+        }
+    ]
+}

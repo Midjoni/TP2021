@@ -1,0 +1,206 @@
+{
+    "id": 0,
+    "name": "Tehnike programiranja (2020\/2021), Zada\u0107a 2, Zadatak 4",
+    "languages": [
+        "C++"
+    ],
+    "tools": {
+        "compile": {
+            "require": "g++",
+            "features": [
+                "optimize",
+                "warn",
+                "pedantic",
+                "C++14"
+            ]
+        },
+        "compile[debug]": {
+            "require": "g++",
+            "features": [
+                "debug",
+                "C++14"
+            ]
+        },
+        "execute": {
+            "environment": {
+                "timeout": 20,
+                "memory": 1000000
+            }
+        },
+        "debug": [],
+        "profile[memcheck]": {
+            "require": "valgrind",
+            "features": [
+                "memcheck"
+            ],
+            "environment": {
+                "timeout": 20
+            }
+        },
+        "profile[sgcheck]": {
+            "require": "valgrind",
+            "features": [
+                "sgcheck"
+            ],
+            "environment": {
+                "timeout": 20
+            }
+        }
+    },
+    "tests": [
+        {
+            "id": 1,
+            "name": "Test 1",
+            "options": [
+                "silent",
+                "terminate"
+            ],
+            "compile": []
+        },
+        {
+            "id": 2,
+            "name": "Test 2",
+            "patch": [
+                {
+                    "position": "main",
+                    "code": "\/*\n\tAutor autotestova za zadatak 4 je Kemal Altwlkany.\n\tZa sva pitanja obratiti se na: kaltwlkany1@etf.unsa.ba\n*\/\n\n\/\/ AT1: primjer dijaloga kada se trazeni element nalazi u nizu.\n{\n\t_main();\n}"
+                },
+                {
+                    "position": "top_of_file",
+                    "code": "#include <iostream>\n#include <vector>\n#include <algorithm>\n#include <stdexcept>\n#include <cmath>"
+                }
+            ],
+            "compile": [],
+            "compile[debug]": [],
+            "execute": {
+                "environment": {
+                    "stdin": "10\n1 2 3 4 5 6 7 8 9 10\n3\n"
+                },
+                "expect": [
+                    "Unesite broj elemenata niza: \nUnesite elemente niza: \nSortiran niz glasi: 6 8 10 4 9 2 3 5 7 1 \nUnesite element koji treba binarno pretraziti: \nTrazeni element se nalazi u nizu."
+                ]
+            },
+            "debug": [],
+            "profile[memcheck]": {
+                "environment": {
+                    "stdin": "10\n1 2 3 4 5 6 7 8 9 10\n3\n"
+                }
+            },
+            "profile[sgcheck]": {
+                "environment": {
+                    "stdin": "10\n1 2 3 4 5 6 7 8 9 10\n3\n"
+                }
+            }
+        },
+        {
+            "id": 3,
+            "name": "Test 3",
+            "patch": [
+                {
+                    "position": "main",
+                    "code": "\/\/ AT2: primjer dijaloga kada se trazeni element NE nalazi u nizu.\n{\n\t_main();\n}"
+                },
+                {
+                    "position": "top_of_file",
+                    "code": "#include <iostream>\n#include <vector>\n#include <algorithm>\n#include <stdexcept>\n#include <cmath>"
+                }
+            ],
+            "compile": [],
+            "compile[debug]": [],
+            "execute": {
+                "environment": {
+                    "stdin": "5\n71 72 99 10000 2\n43"
+                },
+                "expect": [
+                    "Unesite broj elemenata niza: \nUnesite elemente niza: \nSortiran niz glasi: 10000 72 99 2 71 \nUnesite element koji treba binarno pretraziti: \nTrazeni element se ne nalazi u nizu."
+                ]
+            },
+            "debug": [],
+            "profile[memcheck]": {
+                "environment": {
+                    "stdin": "5\n71 72 99 10000 2\n43"
+                }
+            },
+            "profile[sgcheck]": {
+                "environment": {
+                    "stdin": "5\n71 72 99 10000 2\n43"
+                }
+            }
+        },
+        {
+            "id": 4,
+            "name": "Test 4",
+            "patch": [
+                {
+                    "position": "main",
+                    "code": "\/\/ AT3: jednostavni primjer\n{\n\t_main();\n}"
+                },
+                {
+                    "position": "top_of_file",
+                    "code": "#include <iostream>\n#include <vector>\n#include <algorithm>\n#include <stdexcept>\n#include <cmath>"
+                }
+            ],
+            "compile": [],
+            "compile[debug]": [],
+            "execute": {
+                "environment": {
+                    "stdin": "5\n60 72 84 90 96\n33"
+                },
+                "expect": [
+                    "Unesite broj elemenata niza: \nUnesite elemente niza: \nSortiran niz glasi: 60 72 84 90 96 \nUnesite element koji treba binarno pretraziti: \nTrazeni element se ne nalazi u nizu."
+                ]
+            },
+            "debug": [],
+            "profile[memcheck]": {
+                "environment": {
+                    "stdin": "5\n60 72 84 90 96\n33"
+                }
+            },
+            "profile[sgcheck]": {
+                "environment": {
+                    "stdin": "5\n60 72 84 90 96\n33"
+                }
+            }
+        },
+        {
+            "id": 5,
+            "name": "Test 5",
+            "patch": [
+                {
+                    "position": "main",
+                    "code": "\/\/ AT6: prvih 100k prirodnih brojeva\n{\n\tconst int N = 100000;\n\tint niz[N];\n\tfor(int i=0; i<N; i++) niz[i] = i + 1;\n\tSortirajPoBrojuDjelilaca(niz, N);\n\tstd::cout << \"Prvih 10 sortiranih brojeva: \";\n\tfor(int i=0; i<10; i++) std::cout << niz[i] << \" \";\n\tstd::cout << \"\\nPosljednjih 10 sortiranih brojeva: \";\n\tfor(int i=N-10; i<N; i++) std::cout << niz[i] << \" \";\n\tstd::cout << std::endl;\n\treturn 0;\n}"
+                }
+            ],
+            "compile": [],
+            "compile[debug]": [],
+            "execute": {
+                "expect": [
+                    "Prvih 10 sortiranih brojeva: 83160 98280 55440 65520 75600 85680 90720 92400 95760 60480 \nPosljednjih 10 sortiranih brojeva: 99881 99901 99907 99923 99929 99961 99971 99989 99991 1 "
+                ]
+            },
+            "debug": [],
+            "profile[memcheck]": [],
+            "profile[sgcheck]": []
+        },
+        {
+            "id": 6,
+            "name": "Test 6",
+            "patch": [
+                {
+                    "position": "main",
+                    "code": "\/\/ AT10, 1000 brojeva ali pocevsi od broja 100mil sa korakom 24\n{\n\tint x = 1000000000;\n\tconst int N = 1000;\n\tint niz[N];\n\tfor(int i = 0; i<N; i++) niz[i] = x + i*24;\n\tSortirajPoBrojuDjelilaca(niz, N);\n\tfor(int i=0; i<10; i++) std::cout << niz[i] << std::endl;\n\treturn 0;\n}"
+                }
+            ],
+            "compile": [],
+            "compile[debug]": [],
+            "execute": {
+                "expect": [
+                    "1000023640\n1000001200\n1000009360\n1000022800\n1000018240\n1000021600\n1000004200\n1000009600\n1000014400\n1000002832"
+                ]
+            },
+            "debug": [],
+            "profile[memcheck]": [],
+            "profile[sgcheck]": []
+        }
+    ]
+}
